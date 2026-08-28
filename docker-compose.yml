@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wabi-sacco-core
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - JWT_SECRET=wabi-production-sacred-key-2026-financial-grade
+      - REDIS_URL=redis://cache:6379
+      - DB_CONNECTION_STRING=postgresql://wabi_user:wabi_secure_pass@db:5432/wabi_sacco
+    volumes:
+      - wabi_data:/app/data
+    depends_on:
+      - cache
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1:3000/api/health/live"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - wabi_network
+
+  cache:
+    image: redis:7.2-alpine
+    container_name: wabi-sacco-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    volumes:
+      - redis_data:/data
+    networks:
+      - wabi_network
+
+  prometheus:
+    image: prom/prometheus:v2.48.0
+    container_name: wabi-sacco-prometheus
+    restart: unless-stopped
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    networks:
+      - wabi_network
+
+volumes:
+  wabi_data:
+  redis_data:
+  prometheus_data:
+
+networks:
+  wabi_network:
+    driver: bridge
