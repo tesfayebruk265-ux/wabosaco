@@ -1829,6 +1829,17 @@ router.post('/telegram/verify-otp', async (req, res) => {
   }
 });
 
+router.post('/telegram/webhook', async (req, res) => {
+  try {
+    if (req.body) {
+      await telegramBotService.handleUpdate(req.body);
+    }
+    res.json({ ok: true });
+  } catch (err: any) {
+    res.status(200).json({ ok: false, error: err.message });
+  }
+});
+
 router.post('/telegram/test-message', authenticate, async (req, res) => {
   try {
     const { chatId, message } = req.body;

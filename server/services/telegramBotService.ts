@@ -121,7 +121,7 @@ export class TelegramBotService {
   /**
    * Process incoming Telegram update
    */
-  private async handleUpdate(update: any): Promise<void> {
+  public async handleUpdate(update: any): Promise<void> {
     try {
       if (update.message) {
         await this.handleMessage(update.message);

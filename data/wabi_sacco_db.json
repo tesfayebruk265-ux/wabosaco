@@ -2404,11 +2404,12 @@
       "userId": "usr_admin_1",
       "tokenHash": "a450b1801204413cdeda17171284d6815a2d4c702a55592cf287bde4520fabce",
       "familyId": "fam_9a21cb1c-8ab9-4bca-9a91-7e9d77059d61",
-      "isRevoked": false,
+      "isRevoked": true,
       "createdAt": "2026-08-29T07:28:21.088Z",
       "expiresAt": "2026-09-05T07:28:21.173Z",
       "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
-      "ipAddress": "127.0.0.1"
+      "ipAddress": "127.0.0.1",
+      "revokedAt": "2026-08-29T07:36:46.591Z"
     }
   ],
   "sessions": [

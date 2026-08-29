@@ -62,8 +62,26 @@ app.use(async (req, res, next) => {
   next();
 });
 
-// API Routes
+// API Routes mounted on all path variations for Vercel serverless rewrites
+app.use('/api/v1', apiRouter);
 app.use('/api', apiRouter);
+app.use('/v1', apiRouter);
+app.use('/', apiRouter);
+
+// Standardized Global Error Handler for Vercel
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  const statusCode = err.statusCode || err.status || 500;
+  res.status(statusCode).json({
+    success: false,
+    statusCode,
+    error: {
+      code: err.code || 'INTERNAL_SERVER_ERROR',
+      message: err.message || 'An unexpected error occurred.',
+      details: err.details,
+    },
+    timestamp: new Date().toISOString(),
+  });
+});
 
 // Export for Vercel Serverless Function
 export default app;
