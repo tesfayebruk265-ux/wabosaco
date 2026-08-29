@@ -14,9 +14,9 @@
       "failedLoginAttempts": 0,
       "lockedUntil": null,
       "passwordChangedAt": "2025-01-10T08:00:00Z",
-      "lastLoginAt": "2026-08-28T19:14:17.334Z",
+      "lastLoginAt": "2026-08-28T20:31:23.029Z",
       "createdAt": "2025-01-10T08:00:00Z",
-      "updatedAt": "2026-08-28T19:14:17.334Z"
+      "updatedAt": "2026-08-28T20:31:23.029Z"
     },
     {
       "id": "usr_manager_1",
@@ -2263,11 +2263,12 @@
       "userId": "usr_mem_1787747203715",
       "tokenHash": "afc377ec6b9dd6beee834755675c5b165f92dd4793d1274d654e55174a3882c9",
       "familyId": "fam_6dfc0cbe-6507-428e-aa3c-6c4bc2d974c9",
-      "isRevoked": false,
+      "isRevoked": true,
       "createdAt": "2026-08-26T12:27:15.293Z",
       "expiresAt": "2026-09-02T12:27:15.413Z",
       "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
-      "ipAddress": "127.0.0.1"
+      "ipAddress": "127.0.0.1",
+      "revokedAt": "2026-08-28T20:30:01.278Z"
     },
     {
       "id": "rtk_fc19f318-d0f1-4cf0-bfc0-76ad67b3f188",
@@ -2368,14 +2369,47 @@
       "userId": "usr_acct_1",
       "tokenHash": "9d16cc40913b55245aa16c3f32e31deb998efd196d2fc000af76416f7c405619",
       "familyId": "fam_c7b76643-ae6e-4fc6-9b27-77cebf8e030b",
-      "isRevoked": false,
+      "isRevoked": true,
       "createdAt": "2026-08-28T19:15:28.384Z",
       "expiresAt": "2026-09-04T19:15:28.613Z",
       "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
-      "ipAddress": "127.0.0.1"
+      "ipAddress": "127.0.0.1",
+      "revokedAt": "2026-08-28T20:31:06.048Z"
+    },
+    {
+      "id": "rtk_ae9b1b8a-cfcc-43e6-bf88-d77c6dbfa40f",
+      "userId": "usr_admin_1",
+      "tokenHash": "2b2adddbd9380072e5452fd6dfe26fd3131eda985d15b32c794ccd41035c7956",
+      "familyId": "fam_7706f68e-0795-4ea9-8fdf-13a8e929a842",
+      "isRevoked": true,
+      "createdAt": "2026-08-28T20:31:23.029Z",
+      "expiresAt": "2026-09-04T20:31:23.105Z",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "ipAddress": "127.0.0.1",
+      "revokedAt": "2026-08-28T20:33:40.086Z"
     }
   ],
   "sessions": [
+    {
+      "id": "ses_1841ee6b-94b0-4fbd-85bc-c3d22788d863",
+      "accessTokenId": "ses_1841ee6b-94b0-4fbd-85bc-c3d22788d863",
+      "userId": "usr_admin_1",
+      "username": "admin.sacco",
+      "userRole": "ADMIN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "browser": "Google Chrome",
+      "os": "Windows 11 / 10",
+      "deviceType": "DESKTOP",
+      "deviceFingerprint": "dfp_31d92b7e494acae0",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "createdAt": "2026-08-28T20:31:23.029Z",
+      "lastActivityAt": "2026-08-28T20:31:23.029Z",
+      "expiresAt": "2026-08-28T20:46:23.190Z",
+      "isActive": true,
+      "mfaVerified": false,
+      "riskScore": 20
+    },
     {
       "id": "ses_e2111c3d-5ddd-47d9-8da0-d4c57bca0b2e",
       "accessTokenId": "ses_e2111c3d-5ddd-47d9-8da0-d4c57bca0b2e",
@@ -2599,6 +2633,17 @@
   ],
   "passwordResetTokens": [],
   "loginHistory": [
+    {
+      "id": "log_52ea46bc-127a-4a75-89be-5717c974d749",
+      "userId": "usr_admin_1",
+      "identifierAttempted": "admin.sacco",
+      "status": "SUCCESS",
+      "failureReason": null,
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "timestamp": "2026-08-28T20:31:23.355Z"
+    },
     {
       "id": "log_1648c0af-0d83-4a32-8fce-8184fa2c673c",
       "userId": "usr_acct_1",
@@ -3030,6 +3075,22 @@
     }
   ],
   "securityEvents": [
+    {
+      "id": "sec_94795721-13eb-4599-b40e-2199beabfbab",
+      "eventType": "LOGIN",
+      "userId": "usr_admin_1",
+      "actorId": null,
+      "severity": "INFO",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "details": {
+        "role": "ADMIN",
+        "loginTime": "2026-08-28T20:31:23.029Z",
+        "sessionId": "ses_1841ee6b-94b0-4fbd-85bc-c3d22788d863",
+        "riskScore": 20
+      },
+      "timestamp": "2026-08-28T20:31:23.424Z"
+    },
     {
       "id": "sec_25ffccbb-9d6e-47fd-bb64-70bc3a6f647e",
       "eventType": "SUSPICIOUS_ACTIVITY",
@@ -12511,6 +12572,7 @@
     "minRequiredShares": 5,
     "minShareValue": 2500,
     "shareDividendRate": 14.5,
+    "registrationFee": 1000,
     "defaultLoanInterestRate": 14,
     "loanLatePenaltyRatePercent": 2,
     "loanLateGraceDays": 5,
@@ -12519,7 +12581,125 @@
     "loanMinContinuousSavingsMonths": 4,
     "loanMinMonthlySavingsAmount": 500,
     "loanMinShareRequirement": 5,
-    "loanSavingsMultiplier": 3
+    "loanSavingsMultiplier": 3,
+    "institutionProfile": {
+      "name": "Wabi SACCO",
+      "amharicName": "ዋቢ የገንዘብ ቁጠባና ብድር ኅብረት ሥራ ማህበር",
+      "legalName": "Wabi Savings and Credit Cooperative Society Ltd.",
+      "legalNameAmharic": "የዋቢ የገንዘብ ቁጠባና ብድር ኅብረት ሥራ ማህበር ኃ/የተ/የግ/ማ",
+      "licenseNumber": "ET-COOP/AA/042",
+      "slogan": "Ethical Wealth Growth & Modern Cooperative Finance for Ethiopia",
+      "amharicSlogan": "ፍትሐዊ የሀብት ዕድገትና ዘመናዊ የኅብረት ሥራ ፋይናንስ ለኢትዮጵያ",
+      "email": "info@wabisacco.et",
+      "hotline1": "+251 978 434 141",
+      "hotline2": "+251 927 011 111",
+      "supportTelegram": "@wabbisaccobot",
+      "headOfficeAddress": "Helen Bldg 3rd Floor, in front of Lideta High Court, Addis Ababa, Ethiopia",
+      "headOfficeAddressAmharic": "ልደታ ከፍተኛ ፍርድ ቤት ፊት ለፊት፣ ሄለን ህንፃ 3ኛ ፎቅ፣ አዲስ አበባ፣ ኢትዮጵያ",
+      "registrationFee": 1000,
+      "branchLocations": [
+        {
+          "id": "branch_main_lideta",
+          "name": "Lideta Head Office & Main Branch",
+          "nameAmharic": "የልደታ ዋና ቅርንጫፍና አስተዳደር ጽ/ቤት",
+          "address": "Helen Bldg 3rd Floor, in front of Lideta High Court, Addis Ababa",
+          "addressAmharic": "ልደታ ከፍተኛ ፍርድ ቤት ፊት ለፊት፣ ሄለን ህንፃ 3ኛ ፎቅ፣ አዲስ አበባ",
+          "phone": "+251 978 434 141",
+          "isMainBranch": true
+        },
+        {
+          "id": "branch_bole",
+          "name": "Bole Medhanialem Service Center",
+          "nameAmharic": "የቦሌ መድኃኔዓለም አገልግሎት ማዕከል",
+          "address": "Behind Edna Mall, Robel Plaza 2nd Floor, Bole, Addis Ababa",
+          "addressAmharic": "ቦሌ መድኃኔዓለም ኤድናሞል ጀርባ፣ ሮቤል ፕላዛ 2ኛ ፎቅ፣ አዲስ አበባ",
+          "phone": "+251 927 011 111",
+          "isMainBranch": false
+        },
+        {
+          "id": "branch_piassa",
+          "name": "Arada / Piassa Service Desk",
+          "nameAmharic": "የአራዳ / ፒያሳ አገልግሎት ማዕከል",
+          "address": "De Gaulle Square, Commercial Center 1st Floor, Arada, Addis Ababa",
+          "addressAmharic": "ደጎል አደባባይ፣ የንግድ ማዕከል 1ኛ ፎቅ፣ አራዳ፣ አዲስ አበባ",
+          "phone": "+251 911 223 344",
+          "isMainBranch": false
+        }
+      ],
+      "bankAccounts": [
+        {
+          "id": "bank_cbe_main",
+          "bankName": "Commercial Bank of Ethiopia (CBE)",
+          "accountName": "Wabi SACCO Society Ltd.",
+          "accountNumber": "1000348920192",
+          "branch": "Lideta Branch",
+          "isDefault": true
+        },
+        {
+          "id": "bank_tsehay",
+          "bankName": "Tsehay Bank",
+          "accountName": "Wabi SACCO Society Ltd.",
+          "accountNumber": "0023910293841",
+          "branch": "Churchill Road Branch",
+          "isDefault": false
+        },
+        {
+          "id": "bank_cbebirr",
+          "bankName": "CBE Birr Short Code",
+          "accountName": "Wabi SACCO Society Merchant",
+          "accountNumber": "894201",
+          "branch": "Digital Wallet",
+          "isDefault": false
+        }
+      ]
+    },
+    "savingsRules": {
+      "regularMinMonthlySaving": 500,
+      "regularMinOpeningBalance": 100,
+      "regularInterestRate": 12.5,
+      "voluntaryMinDeposit": 0,
+      "voluntaryHoldingDays": 3,
+      "voluntaryInterestRate": 13.5,
+      "childrenMinMonthlySaving": 200,
+      "childrenInterestRate": 14,
+      "childrenMaxAgeYears": 18,
+      "timeDepositMinAmount": 5000,
+      "timeDepositPenaltyPercent": 2,
+      "timeDepositInterestRates": {
+        "months3": 13,
+        "months6": 14,
+        "months12": 15,
+        "months24": 15.5,
+        "months36": 16
+      },
+      "interestCalculationPeriod": "MONTHLY",
+      "withdrawalWaitingPeriodDays": 3
+    },
+    "shareRules": {
+      "sharePrice": 500,
+      "minRequiredShares": 5,
+      "maxAllowedShares": 2000,
+      "minShareValue": 2500,
+      "shareDividendRate": 14.5,
+      "allowVoluntaryConversion": true,
+      "shareTransferLockMonths": 12,
+      "shareTransferFeePercent": 1,
+      "maxShareholdingPercentage": 10
+    },
+    "loanRules": {
+      "defaultInterestRate": 14,
+      "latePenaltyRatePercent": 2,
+      "lateGraceDays": 5,
+      "maxActiveLoansPerMember": 1,
+      "maxGuaranteesPerMember": 3,
+      "minContinuousSavingsMonths": 4,
+      "savingsMultiplier": 4,
+      "minShareRequirement": 5,
+      "makerCheckerThreshold": 50000,
+      "managerApprovalThreshold": 150000,
+      "boardApprovalThreshold": 500000,
+      "maxLoanTermMonths": 48
+    }
   },
   "transactionSequence": 46,
   "journalSequence": 104,
@@ -22612,7 +22792,7 @@
       "location": "Addis Ababa (Headquarters LAN), Ethiopia",
       "isApproved": true,
       "approvedAt": "2026-08-28T17:46:35.841Z",
-      "lastUsedAt": "2026-08-28T19:14:17.334Z",
+      "lastUsedAt": "2026-08-28T20:31:23.029Z",
       "isRevoked": false,
       "riskScore": 30,
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
@@ -22651,6 +22831,31 @@
   },
   "passwordHistory": [],
   "riskAssessments": [
+    {
+      "id": "risk_679ab319-097a-41fb-bb67-bbe583546c91",
+      "contextType": "LOGIN",
+      "entityId": "usr_admin_1",
+      "userId": "usr_admin_1",
+      "userFullName": "Yohannes Girma (System Admin)",
+      "riskScore": 20,
+      "riskLevel": "LOW",
+      "riskFactors": [
+        {
+          "rule": "OFF_HOURS_ACCESS",
+          "score": 15,
+          "weight": 1,
+          "description": "Login initiated during off-peak nighttime hours (11 PM - 5 AM)"
+        }
+      ],
+      "actionTaken": "ALLOWED",
+      "ipAddress": "127.0.0.1",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "details": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+        "deviceFingerprint": "dfp_31d92b7e494acae0"
+      },
+      "createdAt": "2026-08-28T20:31:22.938Z"
+    },
     {
       "id": "risk_70414661-faba-4260-97d0-8194562b7b56",
       "contextType": "LOGIN",
