@@ -14,9 +14,9 @@
       "failedLoginAttempts": 0,
       "lockedUntil": null,
       "passwordChangedAt": "2025-01-10T08:00:00Z",
-      "lastLoginAt": "2026-08-28T20:31:23.029Z",
+      "lastLoginAt": "2026-08-29T07:28:21.088Z",
       "createdAt": "2025-01-10T08:00:00Z",
-      "updatedAt": "2026-08-28T20:31:23.029Z"
+      "updatedAt": "2026-08-29T07:28:21.088Z"
     },
     {
       "id": "usr_manager_1",
@@ -2387,9 +2387,71 @@
       "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
       "ipAddress": "127.0.0.1",
       "revokedAt": "2026-08-28T20:33:40.086Z"
+    },
+    {
+      "id": "rtk_1894b0b7-fb93-4560-8d0d-4740f186a9c2",
+      "userId": "usr_admin_1",
+      "tokenHash": "224f3152927df3fd981c837a38780949e9d897b91705a34f040b4c8e253c03fe",
+      "familyId": "fam_504181e5-b787-4377-878b-1395844a6023",
+      "isRevoked": false,
+      "createdAt": "2026-08-29T07:16:53.716Z",
+      "expiresAt": "2026-09-05T07:16:53.797Z",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "rtk_ce476748-bfc4-4298-9f27-2db05bb0991b",
+      "userId": "usr_admin_1",
+      "tokenHash": "a450b1801204413cdeda17171284d6815a2d4c702a55592cf287bde4520fabce",
+      "familyId": "fam_9a21cb1c-8ab9-4bca-9a91-7e9d77059d61",
+      "isRevoked": false,
+      "createdAt": "2026-08-29T07:28:21.088Z",
+      "expiresAt": "2026-09-05T07:28:21.173Z",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "ipAddress": "127.0.0.1"
     }
   ],
   "sessions": [
+    {
+      "id": "ses_0516b7ee-f776-474d-8351-42b509167037",
+      "accessTokenId": "ses_0516b7ee-f776-474d-8351-42b509167037",
+      "userId": "usr_admin_1",
+      "username": "admin.sacco",
+      "userRole": "ADMIN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "browser": "Google Chrome",
+      "os": "Windows 11 / 10",
+      "deviceType": "DESKTOP",
+      "deviceFingerprint": "dfp_31d92b7e494acae0",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "createdAt": "2026-08-29T07:28:21.088Z",
+      "lastActivityAt": "2026-08-29T07:28:21.088Z",
+      "expiresAt": "2026-08-29T07:43:21.242Z",
+      "isActive": true,
+      "mfaVerified": false,
+      "riskScore": 5
+    },
+    {
+      "id": "ses_0218c1a7-c908-45e8-bc1e-64f6eaad5722",
+      "accessTokenId": "ses_0218c1a7-c908-45e8-bc1e-64f6eaad5722",
+      "userId": "usr_admin_1",
+      "username": "admin.sacco",
+      "userRole": "ADMIN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "browser": "Google Chrome",
+      "os": "Windows 11 / 10",
+      "deviceType": "DESKTOP",
+      "deviceFingerprint": "dfp_31d92b7e494acae0",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "createdAt": "2026-08-29T07:16:53.716Z",
+      "lastActivityAt": "2026-08-29T07:16:53.716Z",
+      "expiresAt": "2026-08-29T07:31:53.877Z",
+      "isActive": true,
+      "mfaVerified": false,
+      "riskScore": 5
+    },
     {
       "id": "ses_1841ee6b-94b0-4fbd-85bc-c3d22788d863",
       "accessTokenId": "ses_1841ee6b-94b0-4fbd-85bc-c3d22788d863",
@@ -2633,6 +2695,28 @@
   ],
   "passwordResetTokens": [],
   "loginHistory": [
+    {
+      "id": "log_0d77dc64-f56c-440a-b56e-74ada6899e4f",
+      "userId": "usr_admin_1",
+      "identifierAttempted": "admin.sacco",
+      "status": "SUCCESS",
+      "failureReason": null,
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "timestamp": "2026-08-29T07:28:21.389Z"
+    },
+    {
+      "id": "log_d715d35e-6e59-40a9-99bb-46bf5574a18e",
+      "userId": "usr_admin_1",
+      "identifierAttempted": "admin.sacco",
+      "status": "SUCCESS",
+      "failureReason": null,
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "timestamp": "2026-08-29T07:16:54.077Z"
+    },
     {
       "id": "log_52ea46bc-127a-4a75-89be-5717c974d749",
       "userId": "usr_admin_1",
@@ -3075,6 +3159,38 @@
     }
   ],
   "securityEvents": [
+    {
+      "id": "sec_18955b4d-9e99-484b-843f-00d772f9b1c3",
+      "eventType": "LOGIN",
+      "userId": "usr_admin_1",
+      "actorId": null,
+      "severity": "INFO",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "details": {
+        "role": "ADMIN",
+        "loginTime": "2026-08-29T07:28:21.088Z",
+        "sessionId": "ses_0516b7ee-f776-474d-8351-42b509167037",
+        "riskScore": 5
+      },
+      "timestamp": "2026-08-29T07:28:21.465Z"
+    },
+    {
+      "id": "sec_3e1b8066-0094-4c43-b96a-95c5b80ff99e",
+      "eventType": "LOGIN",
+      "userId": "usr_admin_1",
+      "actorId": null,
+      "severity": "INFO",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "details": {
+        "role": "ADMIN",
+        "loginTime": "2026-08-29T07:16:53.716Z",
+        "sessionId": "ses_0218c1a7-c908-45e8-bc1e-64f6eaad5722",
+        "riskScore": 5
+      },
+      "timestamp": "2026-08-29T07:16:54.165Z"
+    },
     {
       "id": "sec_94795721-13eb-4599-b40e-2199beabfbab",
       "eventType": "LOGIN",
@@ -13167,6 +13283,20 @@
       "openingDate": "2026-08-26",
       "createdAt": "2026-08-28T18:34:47.175Z",
       "updatedAt": "2026-08-28T18:34:47.175Z"
+    },
+    {
+      "id": "acc_shr_wb000033",
+      "accountNo": "SHR-000033",
+      "memberId": "mbr_wb000033",
+      "membershipNo": "WB000033",
+      "memberName": "Bruk Tesfaye",
+      "numberOfShares": 0,
+      "sharePrice": 500,
+      "totalShareValue": 0,
+      "status": "ACTIVE",
+      "openingDate": "2026-08-28",
+      "createdAt": "2026-08-29T07:32:19.919Z",
+      "updatedAt": "2026-08-29T07:32:19.919Z"
     }
   ],
   "shareTransactions": [
@@ -22792,7 +22922,7 @@
       "location": "Addis Ababa (Headquarters LAN), Ethiopia",
       "isApproved": true,
       "approvedAt": "2026-08-28T17:46:35.841Z",
-      "lastUsedAt": "2026-08-28T20:31:23.029Z",
+      "lastUsedAt": "2026-08-29T07:28:21.088Z",
       "isRevoked": false,
       "riskScore": 30,
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
@@ -22831,6 +22961,42 @@
   },
   "passwordHistory": [],
   "riskAssessments": [
+    {
+      "id": "risk_744202fc-755b-4c06-8fe0-5a1a64596d32",
+      "contextType": "LOGIN",
+      "entityId": "usr_admin_1",
+      "userId": "usr_admin_1",
+      "userFullName": "Yohannes Girma (System Admin)",
+      "riskScore": 5,
+      "riskLevel": "LOW",
+      "riskFactors": [],
+      "actionTaken": "ALLOWED",
+      "ipAddress": "127.0.0.1",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "details": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+        "deviceFingerprint": "dfp_31d92b7e494acae0"
+      },
+      "createdAt": "2026-08-29T07:28:20.996Z"
+    },
+    {
+      "id": "risk_3db31e30-182e-4356-a8f9-50d1f6ff3af5",
+      "contextType": "LOGIN",
+      "entityId": "usr_admin_1",
+      "userId": "usr_admin_1",
+      "userFullName": "Yohannes Girma (System Admin)",
+      "riskScore": 5,
+      "riskLevel": "LOW",
+      "riskFactors": [],
+      "actionTaken": "ALLOWED",
+      "ipAddress": "127.0.0.1",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "details": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+        "deviceFingerprint": "dfp_31d92b7e494acae0"
+      },
+      "createdAt": "2026-08-29T07:16:53.634Z"
+    },
     {
       "id": "risk_679ab319-097a-41fb-bb67-bbe583546c91",
       "contextType": "LOGIN",

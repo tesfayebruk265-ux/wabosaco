@@ -172,74 +172,104 @@ export class TelegramBotService {
     }
   }
 
+  private getPhoneLookupKeys(phone: string): string[] {
+    const raw = (phone || '').trim();
+    const digits = raw.replace(/\D/g, '');
+    const keys = new Set<string>([raw, raw.replace(/[\s()-]/g, '')]);
+
+    let local9 = '';
+    if (digits.startsWith('251') && digits.length === 12) {
+      local9 = digits.slice(3);
+    } else if (digits.startsWith('0') && digits.length === 10) {
+      local9 = digits.slice(1);
+    } else if (digits.length === 9) {
+      local9 = digits;
+    }
+
+    if (local9) {
+      keys.add(`+251${local9}`);
+      keys.add(`0${local9}`);
+      keys.add(`251${local9}`);
+      keys.add(local9);
+    }
+    return Array.from(keys);
+  }
+
   /**
    * Handle contact verification: Automatically checks if user's Telegram phone matches registered account
    */
   private async handleContactVerification(chatId: number, contact: any, fromUser: any): Promise<void> {
-    let rawPhone = contact.phone_number.trim().replace(/[\s()-]/g, '');
-    if (!rawPhone.startsWith('+') && !rawPhone.startsWith('251') && !rawPhone.startsWith('0')) {
-      rawPhone = '+' + rawPhone;
-    }
-
-    // Normalize variations of the phone number
-    const normalizedIntl = rawPhone.startsWith('+') ? rawPhone : (rawPhone.startsWith('251') ? '+' + rawPhone : '+251' + rawPhone.replace(/^0/, ''));
-    const normalizedLocal = '0' + normalizedIntl.replace(/^\+251/, '');
-    const normalizedPlain = normalizedIntl.replace(/^\+/, '');
+    const rawPhone = contact.phone_number || '';
+    const phoneKeys = this.getPhoneLookupKeys(rawPhone);
+    const digits = rawPhone.replace(/\D/g, '');
+    const local9 = digits.startsWith('251') && digits.length === 12 ? digits.slice(3) : (digits.startsWith('0') ? digits.slice(1) : digits.slice(-9));
+    const normalizedIntl = local9 ? `+251${local9}` : rawPhone;
+    const normalizedLocal = local9 ? `0${local9}` : rawPhone;
 
     logger.info(`[TelegramBot] Verifying contact: ${normalizedIntl} (ChatID: ${chatId})`);
 
-    // Check if there is an active OTP pending for THIS specific phone number requested from the web app
-    let activeOtp =
-      this.activeOtps.get(normalizedIntl) ||
-      this.activeOtps.get(normalizedLocal) ||
-      this.activeOtps.get(normalizedPlain) ||
-      this.activeOtps.get(rawPhone);
-
-    if (activeOtp) {
-      // Exact match verified: Telegram phone matches the phone number entered on the website!
-      const otpCode = activeOtp.otpCode;
-      const targetId = activeOtp.userId || normalizedIntl;
-
-      // Mark challenge as verified for this phone
-      activeOtp.verified = true;
-
-      // Search database for matching user or member for personalization
-      const allUsers = db.getUsers();
-      const matchedUser = allUsers.find((u) => {
-        const uPhone = (u.phoneNumber || '').trim().replace(/[\s+()-]/g, '');
-        return (
-          uPhone === normalizedPlain ||
-          uPhone === normalizedLocal ||
-          uPhone === normalizedIntl.replace(/^\+/, '') ||
-          (u.phoneNumber && u.phoneNumber.includes(normalizedLocal.slice(1)))
-        );
-      });
-
-      if (matchedUser) {
-        try {
-          db.updateUser(matchedUser.id, {
-            avatarUrl: matchedUser.avatarUrl || fromUser.username ? `https://t.me/${fromUser.username}` : undefined,
-          });
-        } catch {
-          // non-blocking
-        }
+    // Check if there is an active OTP pending for THIS phone number
+    let activeOtp: StoredOtp | undefined;
+    for (const key of phoneKeys) {
+      if (this.activeOtps.has(key)) {
+        activeOtp = this.activeOtps.get(key);
+        break;
       }
+    }
 
-      // Format professional Wabi SACCO verification OTP message
-      const memberName = matchedUser?.fullName || matchedUser?.username || fromUser.first_name || 'Valued Member';
-      const membershipNo = matchedUser?.membershipNo || 'REG-' + normalizedLocal.slice(-4);
-      const timestamp = new Date().toLocaleString('en-US', {
-        timeZone: 'Africa/Addis_Ababa',
-        dateStyle: 'medium',
-        timeStyle: 'short',
-      });
+    // If no OTP was generated yet from web UI or it expired, auto-generate fresh OTP on the spot
+    if (!activeOtp || Date.now() > activeOtp.expiresAt) {
+      const freshCode = Math.floor(100000 + Math.random() * 900000).toString();
+      activeOtp = {
+        userId: normalizedIntl,
+        phone: normalizedIntl,
+        otpCode: freshCode,
+        createdAt: Date.now(),
+        expiresAt: Date.now() + 15 * 60 * 1000,
+        verified: true,
+      };
 
-      const sysSettings = db.getSystemSettings();
-      const profile = sysSettings.institutionProfile;
-      const hotlines = profile ? `${profile.hotline1} | ${profile.hotline2}` : '+251 978 434 141 | +251 927 011 111';
-      const address = profile?.headOfficeAddress || 'Helen Bldg 3rd Floor, in front of Lideta High Court, Addis Ababa';
+      for (const key of phoneKeys) {
+        this.activeOtps.set(key, activeOtp);
+      }
+    } else {
+      activeOtp.verified = true;
+    }
 
-      const messageText =
+    const otpCode = activeOtp.otpCode;
+
+    // Search database for matching user or member for personalization
+    const allUsers = db.getUsers();
+    const matchedUser = allUsers.find((u) => {
+      const uPhoneKeys = this.getPhoneLookupKeys(u.phoneNumber || '');
+      return phoneKeys.some((k) => uPhoneKeys.includes(k));
+    });
+
+    if (matchedUser) {
+      try {
+        db.updateUser(matchedUser.id, {
+          avatarUrl: matchedUser.avatarUrl || (fromUser.username ? `https://t.me/${fromUser.username}` : undefined),
+        });
+      } catch {
+        // non-blocking
+      }
+    }
+
+    // Format professional Wabi SACCO verification OTP message
+    const memberName = matchedUser?.fullName || matchedUser?.username || fromUser.first_name || 'Valued Member';
+    const membershipNo = matchedUser?.membershipNo || 'REG-' + normalizedLocal.slice(-4);
+    const timestamp = new Date().toLocaleString('en-US', {
+      timeZone: 'Africa/Addis_Ababa',
+      dateStyle: 'medium',
+      timeStyle: 'short',
+    });
+
+    const sysSettings = db.getSystemSettings();
+    const profile = sysSettings.institutionProfile;
+    const hotlines = profile ? `${profile.hotline1} | ${profile.hotline2}` : '+251 978 434 141 | +251 927 011 111';
+    const address = profile?.headOfficeAddress || 'Helen Bldg 3rd Floor, in front of Lideta High Court, Addis Ababa';
+
+    const messageText =
 `🏦 *WABI SACCO ENTERPRISE CORE BANKING*
 _የዋቢ የቁጠባና ብድር ኅብረት ሥራ ማህበር_
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -247,7 +277,7 @@ _የዋቢ የቁጠባና ብድር ኅብረት ሥራ ማህበር_
 ውድ *${memberName}* / Dear Member,
 
 ✅ *የስልክ ቁጥር ማንነትዎ ተረጋግጧል / Phone Verified!*
-የተጋራው የቴሌግራም ስልክ (\`${normalizedIntl}\`) በድረ-ገጹ ላይ ካስገቡት ስልክ ጋር በትክክል ተዛምዷል።
+የተጋራው የቴሌግራም ስልክ (\`${normalizedIntl}\`) በትክክል ተረጋግጧል።
 
 የእርስዎ የማረጋገጫ ሚስጥር ኮድ (OTP) የሚከተለው ነው፡
 Your Wabi SACCO verification OTP code is:
@@ -256,15 +286,14 @@ Your Wabi SACCO verification OTP code is:
    👉  *${otpCode}*  👈
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-⏱ *የሚያገለግልበት ጊዜ / Expiry:* 10 Minutes
+⏱ *የሚያገለግልበት ጊዜ / Expiry:* 15 Minutes
 👤 *የአባል ቁጥር / Member ID:* \`${membershipNo}\`
 📱 *የተረጋገጠ ስልክ / Verified Phone:* \`${normalizedIntl}\`
 🕒 *ሰዓት / Timestamp:* ${timestamp}
 
 ⚠️ *የደህንነት ማስጠንቀቂያ / SECURITY ADVICE:*
+• ይህን ሚስጥር ኮድ በድረ-ገጹ ላይ ባለው የምዝገባ/መግቢያ ቅጽ ላይ ያስገቡ።
 • ይህን ሚስጥር ኮድ ለማንም ሰው አሳልፈው አይስጡ።
-• የዋቢ ሳኮ ሠራተኞች ይህንን ኮድ በጭራሽ አይጠይቁም።
-• ጥያቄውን እርስዎ ካልጀመሩት ወዲያውኑ ለደህንነት ክፍላችን ያሳውቁ።
 • Never share this OTP verification code with anyone. Wabi SACCO staff will NEVER ask for it.
 
 ────────────────────────────
@@ -272,64 +301,23 @@ Your Wabi SACCO verification OTP code is:
 📍 *Address:* ${address}
 🌐 *Web Portal:* https://wabisacco.et`;
 
-      // Send the OTP message with interactive quick action buttons
-      await this.sendMessage(chatId, messageText, {
-        parse_mode: 'Markdown',
-        reply_markup: {
-          inline_keyboard: [
-            [
-              { text: '💰 Check My Balance', callback_data: `balance_${matchedUser?.id || 'guest'}` },
-              { text: '📄 Mini Statement', callback_data: `statement_${matchedUser?.id || 'guest'}` },
-            ],
-            [
-              { text: '📞 Call Support', callback_data: 'support_info' },
-            ],
+    // Send the OTP message with interactive quick action buttons
+    await this.sendMessage(chatId, messageText, {
+      parse_mode: 'Markdown',
+      reply_markup: {
+        inline_keyboard: [
+          [
+            { text: '💰 Check My Balance', callback_data: `balance_${matchedUser?.id || 'guest'}` },
+            { text: '📄 Mini Statement', callback_data: `statement_${matchedUser?.id || 'guest'}` },
           ],
-        },
-      });
-
-      logger.info(`[TelegramBot] Successfully verified phone match ${normalizedIntl} and dispatched OTP: ${otpCode}`);
-    } else {
-      // MISMATCH: The phone number shared via Telegram does NOT match what was entered on the website
-      const sysSettings = db.getSystemSettings();
-      const profile = sysSettings.institutionProfile;
-      const hotlines = profile ? `${profile.hotline1} / ${profile.hotline2}` : '+251 978 434 141 / +251 927 011 111';
-      const address = profile?.headOfficeAddress || 'Opposite Helen Bldg, in front of Lideta High Court, 3rd Floor, Addis Ababa';
-
-      const mismatchText =
-`❌ *የስልክ ቁጥር አለመዛመድ / Phone Number Mismatch*
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-ውድ *${fromUser.first_name || 'ደንበኛ'}*፣
-ያጋሩት የቴሌግራም ስልክ ቁጥር (\`${normalizedIntl}\`) በድረ-ገጹ ላይ ከተመዘገበው ስልክ ጋር አይዛመድም።
-
-The Telegram phone number you shared (*${normalizedIntl}*) does NOT match the phone number entered on the Wabi SACCO registration form.
-
-⚠️ *የደህንነት መመሪያ / Security Rule:*
-የማረጋገጫ ኮድ (OTP) የሚላከው በድረ-ገጹ ላይ ያስገቡት ስልክ ቁጥርና እዚህ ያጋሩት የቴሌግራም ስልክ ቁጥር አንድ ዓይነት ሲሆኑ ብቻ ነው።
-Verification OTP codes are only issued when the registration phone number exactly matches your active Telegram phone number.
-
-📌 *ምን ማድረግ አለብዎት? / What to do:*
-1. ድረ-ገጹ ላይ የተጠቀሙትን ስልክ ቁጥር ያስተካክሉ ወይም
-2. በዚያው ስልክ የተከፈተ የቴሌግራም መለያ ይጠቀሙ።
-
-────────────────────────────
-📞 *Customer Service:* ${hotlines}
-📍 *Branch:* ${address}`;
-
-      await this.sendMessage(chatId, mismatchText, {
-        parse_mode: 'Markdown',
-        reply_markup: {
-          keyboard: [
-            [{ text: '📱 Share Phone Number / ስልክ ቁጥርዎን ያረጋግጡ', request_contact: true }],
-            [{ text: '📞 Support & Office / ድጋፍ ማዕከል' }],
+          [
+            { text: '📞 Call Support', callback_data: 'support_info' },
           ],
-          resize_keyboard: true,
-        },
-      });
+        ],
+      },
+    });
 
-      logger.warn(`[TelegramBot] Phone mismatch: User shared ${normalizedIntl} but no active OTP challenge found.`);
-    }
+    logger.info(`[TelegramBot] Successfully verified phone match ${normalizedIntl} and dispatched OTP: ${otpCode}`);
   }
 
   /**
@@ -596,26 +584,24 @@ _Addis Ababa, Opposite Helen Building, in front of Lideta High Court, 3rd Floor_
     const targetMemNo = membershipNo || user?.membershipNo || 'MBR-' + (user?.id.slice(-6) || 'CORE');
     const phone = user?.phoneNumber || phoneOrIdentifier;
 
-    const cleanPhone = phone.trim().replace(/[\s()-]/g, '');
-    const normalizedIntl = cleanPhone.startsWith('+') ? cleanPhone : (cleanPhone.startsWith('251') ? '+' + cleanPhone : '+251' + cleanPhone.replace(/^0/, ''));
-    const normalizedLocal = '0' + normalizedIntl.replace(/^\+251/, '');
-    const normalizedPlain = normalizedIntl.replace(/^\+/, '');
+    const phoneKeys = this.getPhoneLookupKeys(phone);
+    const digits = phone.replace(/\D/g, '');
+    const local9 = digits.startsWith('251') && digits.length === 12 ? digits.slice(3) : (digits.startsWith('0') ? digits.slice(1) : digits.slice(-9));
+    const normalizedIntl = local9 ? `+251${local9}` : phone;
 
     const storedEntry: StoredOtp = {
       userId: user?.id || normalizedIntl,
       phone: normalizedIntl,
       otpCode,
       createdAt: Date.now(),
-      expiresAt: Date.now() + 10 * 60 * 1000,
+      expiresAt: Date.now() + 15 * 60 * 1000,
       verified: false,
     };
 
     // Store in active OTP cache under all potential lookup formats
-    this.activeOtps.set(phone, storedEntry);
-    this.activeOtps.set(cleanPhone, storedEntry);
-    this.activeOtps.set(normalizedIntl, storedEntry);
-    this.activeOtps.set(normalizedLocal, storedEntry);
-    this.activeOtps.set(normalizedPlain, storedEntry);
+    for (const key of phoneKeys) {
+      this.activeOtps.set(key, storedEntry);
+    }
 
     const timestamp = new Date().toLocaleString('en-US', {
       timeZone: 'Africa/Addis_Ababa',
@@ -637,7 +623,7 @@ Your Wabi SACCO verification OTP code is:
    👉  *${otpCode}*  👈
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-⏱ *የሚያገለግልበት ጊዜ / Expiry:* 10 Minutes
+⏱ *የሚያገለግልበት ጊዜ / Expiry:* 15 Minutes
 👤 *የአባል ቁጥር / Member ID:* \`${targetMemNo}\`
 📱 *ስልክ / Phone:* \`${normalizedIntl}\`
 🕒 *ሰዓት / Timestamp:* ${timestamp}
@@ -673,22 +659,20 @@ Your Wabi SACCO verification OTP code is:
     phoneOrIdentifier: string,
     enteredOtp: string
   ): { success: boolean; message: string; error?: string } {
-    const clean = (phoneOrIdentifier || '').trim().replace(/[\s()-]/g, '');
-    const normalizedIntl = clean.startsWith('+') ? clean : (clean.startsWith('251') ? '+' + clean : '+251' + clean.replace(/^0/, ''));
-    const normalizedLocal = '0' + normalizedIntl.replace(/^\+251/, '');
-    const normalizedPlain = normalizedIntl.replace(/^\+/, '');
-
     // Master test override
     if (enteredOtp.trim() === '123456') {
       return { success: true, message: 'OTP verified successfully (Master Bypass)' };
     }
 
-    const otpEntry =
-      this.activeOtps.get(normalizedIntl) ||
-      this.activeOtps.get(normalizedLocal) ||
-      this.activeOtps.get(normalizedPlain) ||
-      this.activeOtps.get(clean) ||
-      this.activeOtps.get(phoneOrIdentifier);
+    const phoneKeys = this.getPhoneLookupKeys(phoneOrIdentifier);
+    let otpEntry: StoredOtp | undefined;
+
+    for (const key of phoneKeys) {
+      if (this.activeOtps.has(key)) {
+        otpEntry = this.activeOtps.get(key);
+        break;
+      }
+    }
 
     if (!otpEntry) {
       return {
