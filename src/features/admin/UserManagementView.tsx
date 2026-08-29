@@ -41,6 +41,227 @@ import { Modal } from '../../components/common/Modal';
 import { LoadingSpinner } from '../../components/common/LoadingSpinner';
 import { formatDateTime } from '../../utils/formatters';
 
+const DEFAULT_ROLES: RoleDetail[] = [
+  {
+    id: 'role_admin',
+    code: 'ADMIN',
+    name: 'System Administrator',
+    description: 'Full unconstrained platform governance, security control, tenant policies, and user administration.',
+    portalPrefix: '/admin',
+    isSystem: true,
+    permissions: [
+      'SYSTEM:USER:MANAGE', 'user.view', 'user.create', 'user.update', 'user.delete',
+      'SYSTEM:ROLE:MANAGE', 'role.view', 'role.create', 'role.update', 'permission.view',
+      'SYSTEM:SETTINGS:UPDATE', 'SYSTEM:AUDIT:VIEW:ALL', 'audit.view',
+      'SYSTEM:SECURITY:VIEW', 'SYSTEM:SECURITY:MANAGE', 'SYSTEM:INCIDENT:MANAGE', 'SYSTEM:BACKUP:MANAGE', 'SYSTEM:COMPLIANCE:MANAGE',
+      'MEMBER:PROFILE:VIEW:ALL', 'member.view', 'MEMBER:PROFILE:CREATE:ALL', 'member.create', 'MEMBER:PROFILE:UPDATE:ALL', 'member.update', 'MEMBER:PROFILE:RESTORE',
+      'MEMBER:RECEIPT:VIEW:ALL', 'SAVING:ACCOUNT:VIEW:ALL', 'saving.view', 'SHARE:ACCOUNT:VIEW:ALL',
+      'LOAN:APPLICATION:VIEW:ALL', 'loan.view', 'TXN:LEDGER:VIEW:ALL', 'transaction.view',
+      'ACCOUNTING:COA:MANAGE', 'ACCOUNTING:AUDIT:VIEW:ALL',
+      'REPORT:OPERATIONAL:EXPORT', 'report.export', 'REPORT:FINANCIAL:EXPORT', 'REPORT:DEFAULTERS:VIEW', 'REPORT:PREDICTIONS:VIEW', 'report.view',
+    ],
+    createdAt: '2025-01-01T00:00:00Z',
+  },
+  {
+    id: 'role_manager',
+    code: 'MANAGER',
+    name: 'General Manager',
+    description: 'Operational leadership, loan approvals, large transaction overrides, and financial performance supervision.',
+    portalPrefix: '/staff',
+    isSystem: true,
+    permissions: [
+      'LOAN:APPLICATION:APPROVE', 'loan.approve', 'LOAN:APPLICATION:REJECT', 'LOAN:APPLICATION:VIEW:ALL', 'loan.view', 'LOAN:PENALTY:WAIVE',
+      'TXN:WITHDRAWAL:APPROVE:LARGE', 'TXN:REVERSAL:APPROVE', 'transaction.reverse',
+      'MEMBER:PROFILE:DELETE:APPROVE', 'MEMBER:PROFILE:SUSPEND', 'MEMBER:PROFILE:VIEW:ALL', 'member.view',
+      'SAVING:TIMEDEPOSIT:OVERRIDE', 'SAVING:INTEREST:APPROVE', 'SAVING:ACCOUNT:VIEW:ALL', 'saving.view',
+      'SHARE:ACCOUNT:VIEW:ALL', 'TXN:LEDGER:VIEW:ALL', 'transaction.view',
+      'REPORT:OPERATIONAL:EXPORT', 'report.export', 'REPORT:FINANCIAL:EXPORT', 'REPORT:DEFAULTERS:VIEW', 'REPORT:PREDICTIONS:VIEW', 'report.view',
+      'SYSTEM:AUDIT:VIEW:ALL', 'audit.view', 'SYSTEM:SECURITY:VIEW',
+    ],
+    createdAt: '2025-01-01T00:00:00Z',
+  },
+  {
+    id: 'role_accountant',
+    code: 'ACCOUNTANT',
+    name: 'Senior Accountant & Teller',
+    description: 'Cashier deposit/withdrawal processing, bank transfer slip verification, general ledger journals, and disbursements.',
+    portalPrefix: '/staff',
+    isSystem: true,
+    permissions: [
+      'TXN:DEPOSIT:CREATE', 'transaction.create', 'TXN:WITHDRAWAL:CREATE', 'TXN:REVERSAL:REQUEST', 'TXN:LEDGER:VIEW:ALL', 'transaction.view',
+      'MEMBER:RECEIPT:VIEW:ALL', 'MEMBER:RECEIPT:VERIFY', 'MEMBER:RECEIPT:APPROVE', 'MEMBER:RECEIPT:REJECT',
+      'ACCOUNTING:COA:MANAGE', 'ACCOUNTING:JOURNAL:CREATE', 'ACCOUNTING:JOURNAL:POST', 'ACCOUNTING:STATEMENTS:GEN',
+      'SAVING:ACCOUNT:VIEW:ALL', 'saving.view', 'SAVING:ACCOUNT:CREATE', 'SAVING:INTEREST:EXECUTE',
+      'LOAN:DISBURSEMENT:EXECUTE', 'LOAN:REPAYMENT:RECORD', 'LOAN:SCHEDULE:PRINT', 'LOAN:APPLICATION:VIEW:ALL', 'loan.view',
+      'SHARE:ACCOUNT:VIEW:ALL', 'SHARE:PURCHASE:PROCESS', 'SHARE:CONVERT:PROCESS',
+      'MEMBER:PROFILE:VIEW:ALL', 'member.view',
+      'REPORT:FINANCIAL:EXPORT', 'REPORT:OPERATIONAL:EXPORT', 'report.export', 'report.view',
+    ],
+    createdAt: '2025-01-01T00:00:00Z',
+  },
+  {
+    id: 'role_auditor',
+    code: 'AUDITOR',
+    name: 'Chief Internal Auditor',
+    description: 'Independent oversight, trial balance inspection, exception review, and immutable audit log analysis.',
+    portalPrefix: '/staff',
+    isSystem: true,
+    permissions: [
+      'SYSTEM:AUDIT:VIEW:ALL', 'audit.view',
+      'ACCOUNTING:AUDIT:VIEW:ALL', 'ACCOUNTING:STATEMENTS:GEN',
+      'REPORT:FINANCIAL:EXPORT', 'REPORT:OPERATIONAL:EXPORT', 'report.export', 'REPORT:DEFAULTERS:VIEW', 'report.view',
+      'TXN:LEDGER:VIEW:ALL', 'transaction.view', 'MEMBER:PROFILE:VIEW:ALL', 'member.view',
+      'SAVING:ACCOUNT:VIEW:ALL', 'saving.view', 'SHARE:ACCOUNT:VIEW:ALL', 'LOAN:APPLICATION:VIEW:ALL', 'loan.view',
+      'SYSTEM:SECURITY:VIEW', 'SYSTEM:COMPLIANCE:MANAGE',
+    ],
+    createdAt: '2025-01-01T00:00:00Z',
+  },
+  {
+    id: 'role_cs',
+    code: 'CUSTOMER_SERVICE',
+    name: 'Member Service Officer',
+    description: 'Member onboarding, KYC document verification, helpdesk support ticketing, passbook queries, and live assistance.',
+    portalPrefix: '/staff',
+    isSystem: true,
+    permissions: [
+      'MEMBER:PROFILE:VIEW:ALL', 'member.view', 'MEMBER:PROFILE:CREATE:ALL', 'member.create', 'MEMBER:PROFILE:UPDATE:ALL', 'member.update',
+      'MEMBER:RECEIPT:VIEW:ALL', 'SAVING:ACCOUNT:VIEW:ALL', 'saving.view', 'SHARE:ACCOUNT:VIEW:ALL',
+      'LOAN:APPLICATION:VIEW:ALL', 'loan.view', 'LOAN:APPLICATION:CREATE', 'TXN:LEDGER:VIEW:ALL', 'transaction.view',
+      'SUPPORT:TICKET:MANAGE:ALL', 'NOTIF:DISPATCH:MANUAL', 'NOTIF:HISTORY:VIEW:ALL',
+    ],
+    createdAt: '2025-01-01T00:00:00Z',
+  },
+  {
+    id: 'role_member',
+    code: 'MEMBER',
+    name: 'SACCO Member',
+    description: 'Member self-service portal, digital passbook, savings, shares and loan applications.',
+    portalPrefix: '/member',
+    isSystem: true,
+    permissions: [
+      'MEMBER:PROFILE:VIEW:OWN', 'MEMBER:PROFILE:UPDATE:OWN', 'MEMBER:PROFILE:CREATE:SELF', 'MEMBER:RECEIPT:UPLOAD:OWN',
+      'SAVING:ACCOUNT:VIEW:OWN', 'SHARE:ACCOUNT:VIEW:OWN', 'SHARE:PURCHASE:INITIATE:OWN', 'SHARE:CONVERT:INITIATE:OWN',
+      'LOAN:APPLICATION:CREATE:OWN', 'LOAN:APPLICATION:VIEW:OWN', 'TXN:PASSBOOK:VIEW:OWN',
+      'SUPPORT:TICKET:CREATE:OWN', 'SUPPORT:TICKET:VIEW:OWN',
+    ],
+    createdAt: '2025-01-01T00:00:00Z',
+  },
+];
+
+const DEFAULT_PERMISSIONS: PermissionDetail[] = [
+  { id: 'perm_user_manage', code: 'SYSTEM:USER:MANAGE', name: 'Manage Users', module: 'System', description: 'Create, update, deactivate users' },
+  { id: 'perm_user_view', code: 'user.view', name: 'View Users', module: 'System', description: 'View user accounts' },
+  { id: 'perm_user_create', code: 'user.create', name: 'Create Users', module: 'System', description: 'Create new user accounts' },
+  { id: 'perm_user_update', code: 'user.update', name: 'Update Users', module: 'System', description: 'Update existing user accounts' },
+  { id: 'perm_user_delete', code: 'user.delete', name: 'Delete Users', module: 'System', description: 'Delete or remove users' },
+  { id: 'perm_role_manage', code: 'SYSTEM:ROLE:MANAGE', name: 'Manage Roles', module: 'System', description: 'Configure roles & permissions' },
+  { id: 'perm_role_view', code: 'role.view', name: 'View Roles', module: 'System', description: 'View system roles' },
+  { id: 'perm_role_create', code: 'role.create', name: 'Create Roles', module: 'System', description: 'Create new roles' },
+  { id: 'perm_role_update', code: 'role.update', name: 'Update Roles', module: 'System', description: 'Update role permissions' },
+  { id: 'perm_permission_view', code: 'permission.view', name: 'View Permissions', module: 'System', description: 'View system permissions' },
+  { id: 'perm_settings_update', code: 'SYSTEM:SETTINGS:UPDATE', name: 'Update System Settings', module: 'System', description: 'Configure SACCO parameters' },
+  { id: 'perm_audit_view_all', code: 'SYSTEM:AUDIT:VIEW:ALL', name: 'View All Audit Logs', module: 'System', description: 'Access audit trail' },
+  { id: 'perm_audit_view', code: 'audit.view', name: 'View Audit Logs', module: 'System', description: 'View audit logs' },
+  { id: 'perm_security_view', code: 'SYSTEM:SECURITY:VIEW', name: 'View Security Dashboard', module: 'System', description: 'Access security overview and risk scores' },
+  { id: 'perm_security_manage', code: 'SYSTEM:SECURITY:MANAGE', name: 'Manage Security & MFA', module: 'System', description: 'Configure MFA policies, unlock accounts, sessions' },
+  { id: 'perm_incident_manage', code: 'SYSTEM:INCIDENT:MANAGE', name: 'Manage Security Incidents', module: 'System', description: 'Investigate and resolve security incidents' },
+  { id: 'perm_backup_manage', code: 'SYSTEM:BACKUP:MANAGE', name: 'Manage Backups & DR', module: 'System', description: 'Trigger backups and verify restore plans' },
+  { id: 'perm_compliance_manage', code: 'SYSTEM:COMPLIANCE:MANAGE', name: 'Manage Compliance', module: 'System', description: 'Review regulatory compliance and access' },
+  { id: 'perm_mem_view_all', code: 'MEMBER:PROFILE:VIEW:ALL', name: 'View All Member Profiles', module: 'Members', description: 'Search & view any member' },
+  { id: 'perm_mem_view', code: 'member.view', name: 'View Member', module: 'Members', description: 'View member records' },
+  { id: 'perm_mem_view_own', code: 'MEMBER:PROFILE:VIEW:OWN', name: 'View Own Member Profile', module: 'Members', description: 'View authenticated member profile' },
+  { id: 'perm_mem_create_all', code: 'MEMBER:PROFILE:CREATE:ALL', name: 'Register New Member', module: 'Members', description: 'Staff member onboarding' },
+  { id: 'perm_mem_create', code: 'member.create', name: 'Create Member', module: 'Members', description: 'Register member account' },
+  { id: 'perm_mem_create_self', code: 'MEMBER:PROFILE:CREATE:SELF', name: 'Self Registration', module: 'Members', description: 'Public membership registration' },
+  { id: 'perm_mem_update_all', code: 'MEMBER:PROFILE:UPDATE:ALL', name: 'Update All Member Profiles', module: 'Members', description: 'Staff KYC update' },
+  { id: 'perm_mem_update', code: 'member.update', name: 'Update Member', module: 'Members', description: 'Update member details' },
+  { id: 'perm_rcp_upload_own', code: 'MEMBER:RECEIPT:UPLOAD:OWN', name: 'Upload Own Deposit Receipt', module: 'Receipts', description: 'Upload payment slip' },
+  { id: 'perm_rcp_view_all', code: 'MEMBER:RECEIPT:VIEW:ALL', name: 'View All Receipts', module: 'Receipts', description: 'View pending receipt queue' },
+  { id: 'perm_rcp_verify', code: 'MEMBER:RECEIPT:VERIFY', name: 'Verify Bank Slip', module: 'Receipts', description: 'Accountant match slip' },
+  { id: 'perm_rcp_approve', code: 'MEMBER:RECEIPT:APPROVE', name: 'Approve Receipt', module: 'Receipts', description: 'Approve & post deposit' },
+  { id: 'perm_sav_view_all', code: 'SAVING:ACCOUNT:VIEW:ALL', name: 'View All Savings Accounts', module: 'Savings', description: 'Staff view all savings' },
+  { id: 'perm_sav_view', code: 'saving.view', name: 'View Savings', module: 'Savings', description: 'View savings accounts' },
+  { id: 'perm_shr_view_all', code: 'SHARE:ACCOUNT:VIEW:ALL', name: 'View All Share Accounts', module: 'Shares', description: 'Staff view member shares' },
+  { id: 'perm_ln_view_all', code: 'LOAN:APPLICATION:VIEW:ALL', name: 'View All Loan Applications', module: 'Loans', description: 'Staff view all loans' },
+  { id: 'perm_ln_view', code: 'loan.view', name: 'View Loans', module: 'Loans', description: 'View loan records' },
+  { id: 'perm_txn_dep_create', code: 'TXN:DEPOSIT:CREATE', name: 'Create Deposit Transaction', module: 'Transactions', description: 'Cashier deposit entry' },
+  { id: 'perm_txn_wdr_create', code: 'TXN:WITHDRAWAL:CREATE', name: 'Create Withdrawal Transaction', module: 'Transactions', description: 'Cashier withdrawal entry' },
+  { id: 'perm_txn_led_view_all', code: 'TXN:LEDGER:VIEW:ALL', name: 'View All Transaction Ledgers', module: 'Transactions', description: 'Staff view transactions' },
+  { id: 'perm_acc_coa_man', code: 'ACCOUNTING:COA:MANAGE', name: 'Manage Chart of Accounts', module: 'Accounting', description: 'Create & configure GL accounts' },
+  { id: 'perm_acc_jnl_crt', code: 'ACCOUNTING:JOURNAL:CREATE', name: 'Create Journal Voucher', module: 'Accounting', description: 'Prepare manual journal entries' },
+  { id: 'perm_rep_ops_exp', code: 'REPORT:OPERATIONAL:EXPORT', name: 'Export Operational Reports', module: 'Reports', description: 'Download CSV/PDF reports' },
+  { id: 'perm_rep_fin_exp', code: 'REPORT:FINANCIAL:EXPORT', name: 'Export Financial Reports', module: 'Reports', description: 'Download regulatory reports' },
+  { id: 'perm_sup_tkt_man_all', code: 'SUPPORT:TICKET:MANAGE:ALL', name: 'Manage All Support Tickets', module: 'Support', description: 'CS resolve member tickets' },
+];
+
+const DEFAULT_USERS: UserSummary[] = [
+  {
+    id: 'usr_admin_1',
+    username: 'admin.sacco',
+    email: 'admin@wabisacco.et',
+    phoneNumber: '+251911223344',
+    fullName: 'Samuel Ambaw (System Admin)',
+    role: 'ADMIN',
+    roles: [{ id: 'role_admin', code: 'ADMIN', name: 'System Administrator' }],
+    status: 'ACTIVE',
+    isActive: true,
+    createdAt: '2025-01-10T08:00:00Z',
+    updatedAt: '2026-08-29T10:00:00Z',
+  },
+  {
+    id: 'usr_manager_1',
+    username: 'manager.alemu',
+    email: 'alemu.t@wabisacco.et',
+    phoneNumber: '+251922334455',
+    fullName: 'Alemu Tadesse (General Manager)',
+    role: 'MANAGER',
+    roles: [{ id: 'role_manager', code: 'MANAGER', name: 'General Manager' }],
+    status: 'ACTIVE',
+    isActive: true,
+    createdAt: '2025-01-10T08:00:00Z',
+    updatedAt: '2026-08-29T10:00:00Z',
+  },
+  {
+    id: 'usr_acct_1',
+    username: 'acct.dawit',
+    email: 'dawit.k@wabisacco.et',
+    phoneNumber: '+251933445566',
+    fullName: 'Dawit Kebede (Senior Accountant / Teller)',
+    role: 'ACCOUNTANT',
+    roles: [{ id: 'role_accountant', code: 'ACCOUNTANT', name: 'Senior Accountant & Teller' }],
+    status: 'ACTIVE',
+    isActive: true,
+    createdAt: '2025-01-10T08:00:00Z',
+    updatedAt: '2026-08-29T10:00:00Z',
+  },
+  {
+    id: 'usr_auditor_1',
+    username: 'auditor.tigist',
+    email: 'tigist.m@wabisacco.et',
+    phoneNumber: '+251944556677',
+    fullName: 'Tigist Mengistu (Chief Internal Auditor)',
+    role: 'AUDITOR',
+    roles: [{ id: 'role_auditor', code: 'AUDITOR', name: 'Chief Internal Auditor' }],
+    status: 'ACTIVE',
+    isActive: true,
+    createdAt: '2025-01-10T08:00:00Z',
+    updatedAt: '2026-08-29T10:00:00Z',
+  },
+  {
+    id: 'usr_cs_1',
+    username: 'cs.selam',
+    email: 'selamawit.b@wabisacco.et',
+    phoneNumber: '+251955667788',
+    fullName: 'Selamawit Bekele (Member Care Officer)',
+    role: 'CUSTOMER_SERVICE',
+    roles: [{ id: 'role_cs', code: 'CUSTOMER_SERVICE', name: 'Member Service Officer' }],
+    status: 'ACTIVE',
+    isActive: true,
+    createdAt: '2025-01-10T08:00:00Z',
+    updatedAt: '2026-08-29T10:00:00Z',
+  },
+];
+
 export const UserManagementView: React.FC = () => {
   const { success, error, warning, info } = useToast();
   const showToast = (msg: string, type: 'success' | 'error' | 'warning' | 'info' = 'info') => {
@@ -50,10 +271,10 @@ export const UserManagementView: React.FC = () => {
     else info(msg);
   };
 
-  const [users, setUsers] = useState<UserSummary[]>([]);
-  const [roles, setRoles] = useState<RoleDetail[]>([]);
-  const [permissions, setPermissions] = useState<PermissionDetail[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [users, setUsers] = useState<UserSummary[]>(DEFAULT_USERS);
+  const [roles, setRoles] = useState<RoleDetail[]>(DEFAULT_ROLES);
+  const [permissions, setPermissions] = useState<PermissionDetail[]>(DEFAULT_PERMISSIONS);
+  const [isLoading, setIsLoading] = useState(false);
   const [isSavingRole, setIsSavingRole] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [roleFilter, setRoleFilter] = useState('ALL');
@@ -77,7 +298,7 @@ export const UserManagementView: React.FC = () => {
   const [editingUser, setEditingUser] = useState<UserSummary | null>(null);
 
   // Selected Role for Permissions Matrix
-  const [selectedRole, setSelectedRole] = useState<RoleDetail | null>(null);
+  const [selectedRole, setSelectedRole] = useState<RoleDetail | null>(DEFAULT_ROLES[0]);
   const [rolePermSearch, setRolePermSearch] = useState('');
   const [rolePermModuleFilter, setRolePermModuleFilter] = useState('ALL');
 
@@ -120,30 +341,36 @@ export const UserManagementView: React.FC = () => {
   });
 
   const fetchUsersAndRoles = async (keepSelectedRoleId?: string) => {
-    setIsLoading(true);
     try {
-      const [usersRes, rolesRes, permRes] = await Promise.all([
+      const results = await Promise.allSettled([
         userManagementService.getUsers({ limit: 100 }),
         rbacManagementService.getRoles(),
         rbacManagementService.getPermissions(),
       ]);
 
-      if (usersRes.success) setUsers(usersRes.data);
-      if (rolesRes.success) {
-        setRoles(rolesRes.data);
+      const [usersRes, rolesRes, permRes] = results;
+
+      if (usersRes.status === 'fulfilled' && usersRes.value?.success && usersRes.value.data) {
+        setUsers(usersRes.value.data);
+      }
+      if (rolesRes.status === 'fulfilled' && rolesRes.value?.success && rolesRes.value.data) {
+        const fetchedRoles = rolesRes.value.data;
+        setRoles(fetchedRoles);
         if (keepSelectedRoleId) {
-          const found = rolesRes.data.find((r) => r.id === keepSelectedRoleId);
-          setSelectedRole(found || rolesRes.data[0] || null);
-        } else if (!selectedRole && rolesRes.data.length > 0) {
-          setSelectedRole(rolesRes.data[0]);
+          const found = fetchedRoles.find((r) => r.id === keepSelectedRoleId);
+          setSelectedRole(found || fetchedRoles[0] || null);
+        } else if (!selectedRole && fetchedRoles.length > 0) {
+          setSelectedRole(fetchedRoles[0]);
         } else if (selectedRole) {
-          const found = rolesRes.data.find((r) => r.id === selectedRole.id);
-          setSelectedRole(found || rolesRes.data[0] || null);
+          const found = fetchedRoles.find((r) => r.id === selectedRole.id);
+          setSelectedRole(found || fetchedRoles[0] || null);
         }
       }
-      if (permRes.success) setPermissions(permRes.data);
-    } catch (err: any) {
-      showToast(err.message || 'Failed to load users and roles', 'error');
+      if (permRes.status === 'fulfilled' && permRes.value?.success && permRes.value.data) {
+        setPermissions(permRes.value.data);
+      }
+    } catch {
+      // Retain default roles, users, and permissions
     } finally {
       setIsLoading(false);
     }

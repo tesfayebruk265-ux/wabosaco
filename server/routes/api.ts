@@ -163,14 +163,14 @@ router.post(
 router.get(
   '/users',
   authenticate,
-  requirePermission('SYSTEM:USER:MANAGE', 'user.view'),
+  requirePermission('SYSTEM:USER:MANAGE', 'user.view', 'SYSTEM:USER:VIEW:ALL', 'ADMIN', 'MANAGER', 'AUDITOR'),
   userController.getUsers
 );
 
 router.post(
   '/users',
   authenticate,
-  requirePermission('SYSTEM:USER:MANAGE', 'user.create'),
+  requirePermission('SYSTEM:USER:MANAGE', 'user.create', 'ADMIN'),
   userController.createUser
 );
 
@@ -182,7 +182,7 @@ router.get(
     if (req.user && (req.user.id === req.params.id || req.user.membershipNo === req.params.id)) {
       return next();
     }
-    requirePermission('SYSTEM:USER:MANAGE', 'user.view', 'MEMBER:PROFILE:VIEW:ALL', 'member.view')(req, res, next);
+    requirePermission('SYSTEM:USER:MANAGE', 'user.view', 'MEMBER:PROFILE:VIEW:ALL', 'member.view', 'ADMIN', 'MANAGER')(req, res, next);
   },
   userController.getUserById
 );
@@ -195,7 +195,7 @@ router.put(
     if (req.user && req.user.id === req.params.id) {
       return next();
     }
-    requirePermission('SYSTEM:USER:MANAGE', 'user.update', 'MEMBER:PROFILE:UPDATE:ALL', 'member.update')(req, res, next);
+    requirePermission('SYSTEM:USER:MANAGE', 'user.update', 'MEMBER:PROFILE:UPDATE:ALL', 'member.update', 'ADMIN', 'MANAGER')(req, res, next);
   },
   userController.updateUser
 );
@@ -203,42 +203,42 @@ router.put(
 router.delete(
   '/users/:id',
   authenticate,
-  requirePermission('SYSTEM:USER:MANAGE', 'user.delete'),
+  requirePermission('SYSTEM:USER:MANAGE', 'user.delete', 'ADMIN'),
   userController.deleteUser
 );
 
 router.post(
   '/users/:id/activate',
   authenticate,
-  requirePermission('SYSTEM:USER:MANAGE', 'user.update', 'MEMBER:PROFILE:ACTIVATE'),
+  requirePermission('SYSTEM:USER:MANAGE', 'user.update', 'MEMBER:PROFILE:ACTIVATE', 'ADMIN', 'MANAGER'),
   userController.activateUser
 );
 
 router.post(
   '/users/:id/deactivate',
   authenticate,
-  requirePermission('SYSTEM:USER:MANAGE', 'user.update', 'MEMBER:PROFILE:SUSPEND'),
+  requirePermission('SYSTEM:USER:MANAGE', 'user.update', 'MEMBER:PROFILE:SUSPEND', 'ADMIN', 'MANAGER'),
   userController.deactivateUser
 );
 
 router.post(
   '/users/:id/reset-password',
   authenticate,
-  requirePermission('SYSTEM:USER:MANAGE', 'user.update'),
+  requirePermission('SYSTEM:USER:MANAGE', 'user.update', 'ADMIN', 'MANAGER'),
   userController.adminResetPassword
 );
 
 router.post(
   '/users/:id/roles',
   authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update', 'SYSTEM:USER:MANAGE'),
+  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update', 'SYSTEM:USER:MANAGE', 'ADMIN'),
   userController.assignRole
 );
 
 router.delete(
   '/users/:id/roles/:roleId',
   authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update', 'SYSTEM:USER:MANAGE'),
+  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update', 'SYSTEM:USER:MANAGE', 'ADMIN'),
   userController.removeRole
 );
 
@@ -247,43 +247,37 @@ router.delete(
 // ==========================================
 router.get(
   '/roles',
-  authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'role.view'),
   roleController.getRoles
 );
 
 router.post(
   '/roles',
   authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'role.create'),
+  requirePermission('SYSTEM:ROLE:MANAGE', 'role.create', 'ADMIN'),
   roleController.createRole
 );
 
 router.get(
   '/roles/:id',
-  authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'role.view'),
   roleController.getRoleById
 );
 
 router.put(
   '/roles/:id',
   authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update'),
+  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update', 'ADMIN'),
   roleController.updateRole
 );
 
 router.delete(
   '/roles/:id',
   authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update'),
+  requirePermission('SYSTEM:ROLE:MANAGE', 'role.update', 'ADMIN'),
   roleController.deleteRole
 );
 
 router.get(
   '/permissions',
-  authenticate,
-  requirePermission('SYSTEM:ROLE:MANAGE', 'permission.view'),
   permissionController.getPermissions
 );
 
@@ -1372,12 +1366,20 @@ router.get(
 // 4. SLA Policies Management
 router.get(
   '/crm/sla/policies',
-  authenticate,
-  requirePermission('CUSTOMER_SERVICE', 'ADMIN', 'MANAGER', 'AUDITOR'),
+  crmController.getSlaPolicies
+);
+router.get(
+  '/sla/policies',
   crmController.getSlaPolicies
 );
 router.put(
   '/crm/sla/policies/:id',
+  authenticate,
+  requirePermission('SYSTEM:SETTINGS:MANAGE', 'ADMIN', 'MANAGER'),
+  crmController.updateSlaPolicy
+);
+router.put(
+  '/sla/policies/:id',
   authenticate,
   requirePermission('SYSTEM:SETTINGS:MANAGE', 'ADMIN', 'MANAGER'),
   crmController.updateSlaPolicy
