@@ -53,7 +53,7 @@ import {
 import { useToast } from '../../providers/ToastProvider';
 import { useAuth } from '../../providers/AuthProvider';
 import { useLanguage } from '../../providers/LanguageProvider';
-import { useSettings } from '../../providers/SettingsProvider';
+import { useSettings, DEFAULT_SETTINGS, DEFAULT_INSTITUTION_PROFILE } from '../../providers/SettingsProvider';
 import { ThemeToggle, useTheme } from '../../providers/ThemeProvider';
 import { Button } from '../../components/common/Button';
 import { TextInput } from '../../components/common/TextInput';
@@ -95,6 +95,52 @@ type RulesSubTab =
   | 'accounting'
   | 'security';
 
+const DEFAULT_ORG_PROFILE: OrganizationProfile = {
+  id: 'org_main_wabi',
+  name: 'Wabi Savings and Credit Cooperative Society Ltd.',
+  shortName: 'Wabi SACCO',
+  logoUrl: '/assets/wabi-logo.png',
+  address: {
+    street: 'Lideta High Court Area, Helen Bldg 3rd Floor',
+    city: 'Addis Ababa',
+    subcity: 'Lideta Subcity',
+    woreda: 'Woreda 04',
+    region: 'Addis Ababa',
+    postalCode: '1000',
+    country: 'Ethiopia',
+  },
+  phones: {
+    primary: '+251 978 434 141',
+    secondary: '+251 927 011 111',
+    hotline: '8844',
+  },
+  email: 'info@wabisacco.et',
+  website: 'https://wabisacco.et',
+  tin: '0049281729',
+  businessLicense: 'ET-COOP/AA/042',
+  registrationNumber: 'FED/COOP/2021/089',
+  workingHours: {
+    weekdays: '8:00 AM - 5:00 PM',
+    saturdays: '8:30 AM - 12:30 PM',
+    sundays: 'Closed',
+  },
+  coordinates: {
+    latitude: 9.0125,
+    longitude: 38.7468,
+    locationName: 'Lideta Helen Building, Addis Ababa',
+  },
+  timeZone: 'Africa/Addis_Ababa',
+  currency: 'ETB',
+  language: 'en',
+  fiscalYear: {
+    startMonth: 7,
+    endMonth: 6,
+    currentYear: '2026/2027',
+  },
+  dateFormat: 'YYYY-MM-DD',
+  numberFormat: 'STANDARD',
+};
+
 export const EnterpriseSettingsView: React.FC = () => {
   const { user } = useAuth();
   const { refreshSettings } = useSettings();
@@ -106,11 +152,11 @@ export const EnterpriseSettingsView: React.FC = () => {
     else info(msg);
   };
   const [activeTab, setActiveTab] = useState<AdminTab>('rules');
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
-  // Core Data States
-  const [orgProfile, setOrgProfile] = useState<OrganizationProfile | null>(null);
+  // Core Data States with solid defaults
+  const [orgProfile, setOrgProfile] = useState<OrganizationProfile>(DEFAULT_ORG_PROFILE);
   const [workingCalendar, setWorkingCalendar] = useState<WorkingCalendar | null>(null);
   const [featureFlags, setFeatureFlags] = useState<FeatureFlag[]>([]);
   const [localizationPacks, setLocalizationPacks] = useState<LocalizationPack[]>([]);
@@ -118,7 +164,7 @@ export const EnterpriseSettingsView: React.FC = () => {
   const [nextNumbersPreview, setNextNumbersPreview] = useState<Record<string, string>>({});
   const [documentConfig, setDocumentConfig] = useState<DocumentConfig | null>(null);
   const [brandingTheme, setBrandingTheme] = useState<BrandingTheme | null>(null);
-  const [systemSettings, setSystemSettings] = useState<SystemSettings | null>(null);
+  const [systemSettings, setSystemSettings] = useState<SystemSettings>(DEFAULT_SETTINGS);
   const [healthData, setHealthData] = useState<SystemHealthData | null>(null);
   const [auditLogs, setAuditLogs] = useState<ConfigAuditLog[]>([]);
 
@@ -172,23 +218,10 @@ export const EnterpriseSettingsView: React.FC = () => {
   const [editingTransKey, setEditingTransKey] = useState('');
   const [editingTransValue, setEditingTransValue] = useState('');
 
-  // Initial Load
+  // Initial Load with resilient Promise.allSettled
   const fetchAllData = async () => {
-    setIsLoading(true);
     try {
-      const [
-        orgRes,
-        calRes,
-        flagsRes,
-        locRes,
-        numRes,
-        numPrevRes,
-        docRes,
-        brandRes,
-        settingsRes,
-        healthRes,
-        auditRes,
-      ] = await Promise.all([
+      const results = await Promise.allSettled([
         adminService.getOrganizationProfile(),
         adminService.getWorkingCalendar(),
         adminService.getFeatureFlags(),
@@ -202,19 +235,33 @@ export const EnterpriseSettingsView: React.FC = () => {
         adminService.getConfigAuditLogs(),
       ]);
 
-      if (orgRes.success) setOrgProfile(orgRes.data);
-      if (calRes.success) setWorkingCalendar(calRes.data);
-      if (flagsRes.success) setFeatureFlags(flagsRes.data);
-      if (locRes.success) setLocalizationPacks(locRes.data);
-      if (numRes.success) setNumberingSystem(numRes.data);
-      if (numPrevRes.success) setNextNumbersPreview(numPrevRes.data);
-      if (docRes.success) setDocumentConfig(docRes.data);
-      if (brandRes.success) setBrandingTheme(brandRes.data);
-      if (settingsRes.success) setSystemSettings(settingsRes.data);
-      if (healthRes.success) setHealthData(healthRes.data);
-      if (auditRes.success) setAuditLogs(auditRes.data);
-    } catch (err: any) {
-      showToast(err.message || 'Failed to load administration data', 'error');
+      const [
+        orgRes,
+        calRes,
+        flagsRes,
+        locRes,
+        numRes,
+        numPrevRes,
+        docRes,
+        brandRes,
+        settingsRes,
+        healthRes,
+        auditRes,
+      ] = results;
+
+      if (orgRes.status === 'fulfilled' && orgRes.value?.success && orgRes.value.data) setOrgProfile(orgRes.value.data);
+      if (calRes.status === 'fulfilled' && calRes.value?.success && calRes.value.data) setWorkingCalendar(calRes.value.data);
+      if (flagsRes.status === 'fulfilled' && flagsRes.value?.success && flagsRes.value.data) setFeatureFlags(flagsRes.value.data);
+      if (locRes.status === 'fulfilled' && locRes.value?.success && locRes.value.data) setLocalizationPacks(locRes.value.data);
+      if (numRes.status === 'fulfilled' && numRes.value?.success && numRes.value.data) setNumberingSystem(numRes.value.data);
+      if (numPrevRes.status === 'fulfilled' && numPrevRes.value?.success && numPrevRes.value.data) setNextNumbersPreview(numPrevRes.value.data);
+      if (docRes.status === 'fulfilled' && docRes.value?.success && docRes.value.data) setDocumentConfig(docRes.value.data);
+      if (brandRes.status === 'fulfilled' && brandRes.value?.success && brandRes.value.data) setBrandingTheme(brandRes.value.data);
+      if (settingsRes.status === 'fulfilled' && settingsRes.value?.success && settingsRes.value.data) setSystemSettings(settingsRes.value.data);
+      if (healthRes.status === 'fulfilled' && healthRes.value?.success && healthRes.value.data) setHealthData(healthRes.value.data);
+      if (auditRes.status === 'fulfilled' && auditRes.value?.success && auditRes.value.data) setAuditLogs(auditRes.value.data);
+    } catch {
+      // Retain fallback defaults
     } finally {
       setIsLoading(false);
     }

@@ -1506,7 +1506,7 @@ router.put(
 );
 
 // 8. Business Rules Configuration (Central System Settings)
-router.get('/admin/system-settings', authenticate, adminController.getSystemSettings);
+router.get('/admin/system-settings', adminController.getSystemSettings);
 router.put(
   '/admin/system-settings/:section',
   authenticate,

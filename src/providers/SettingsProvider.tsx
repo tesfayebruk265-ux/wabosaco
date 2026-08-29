@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
 import type { SystemSettings, SaccoInstitutionProfile, SaccoBranchLocation, SaccoDepositBankAccount } from '../types/financial';
 import { adminService } from '../services/adminService';
 
-const DEFAULT_INSTITUTION_PROFILE: SaccoInstitutionProfile = {
+export const DEFAULT_INSTITUTION_PROFILE: SaccoInstitutionProfile = {
   name: 'Wabi SACCO',
   amharicName: 'ዋቢ የገንዘብ ቁጠባና ብድር ኅብረት ሥራ ማህበር',
   legalName: 'Wabi Savings and Credit Cooperative Society Ltd.',
@@ -74,7 +74,7 @@ const DEFAULT_INSTITUTION_PROFILE: SaccoInstitutionProfile = {
   ],
 };
 
-const DEFAULT_SETTINGS: SystemSettings = {
+export const DEFAULT_SETTINGS: SystemSettings = {
   largeWithdrawalThreshold: 50000,
   regularMinMonthlySaving: 500,
   voluntaryHoldingDays: 3,
