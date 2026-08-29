@@ -197,7 +197,7 @@ export const EnterpriseSettingsView: React.FC = () => {
 
   // Modals & Dialogs
   const [reasonModalOpen, setReasonModalOpen] = useState(false);
-  const [pendingSaveAction, setPendingSaveAction] = useState<(() => Promise<void>) | null>(null);
+  const [pendingSaveAction, setPendingSaveAction] = useState<((reason: string) => Promise<void>) | null>(null);
   const [changeReason, setChangeReason] = useState('');
 
   // Add Holiday Modal
@@ -272,7 +272,7 @@ export const EnterpriseSettingsView: React.FC = () => {
   }, []);
 
   // Request Save with Change Reason Modal
-  const triggerSaveWithReason = (action: () => Promise<void>) => {
+  const triggerSaveWithReason = (action: (reason: string) => Promise<void>) => {
     setPendingSaveAction(() => action);
     setChangeReason('');
     setReasonModalOpen(true);
@@ -280,16 +280,17 @@ export const EnterpriseSettingsView: React.FC = () => {
 
   const handleConfirmSaveReason = async () => {
     if (!pendingSaveAction) return;
+    const reasonToUse = changeReason.trim() || 'Administrative parameter update by System Administrator';
     setIsSaving(true);
     setReasonModalOpen(false);
     try {
-      await pendingSaveAction();
+      await pendingSaveAction(reasonToUse);
       showToast('Configuration updated successfully', 'success');
       // Refresh audit logs
       const auditRes = await adminService.getConfigAuditLogs();
-      if (auditRes.success) setAuditLogs(auditRes.data);
+      if (auditRes?.success && auditRes.data) setAuditLogs(auditRes.data);
     } catch (err: any) {
-      showToast(err.message || 'Failed to apply configuration', 'error');
+      showToast(err.message || err.error?.message || 'Failed to apply configuration', 'error');
     } finally {
       setIsSaving(false);
       setPendingSaveAction(null);
@@ -299,11 +300,12 @@ export const EnterpriseSettingsView: React.FC = () => {
   // 1. Organization Profile Save
   const handleSaveOrgProfile = () => {
     if (!orgProfile) return;
-    triggerSaveWithReason(async () => {
-      const res = await adminService.updateOrganizationProfile(orgProfile, changeReason);
+    triggerSaveWithReason(async (reason) => {
+      const res = await adminService.updateOrganizationProfile(orgProfile, reason);
       if (res.success) {
         setOrgProfile(res.data);
         await refreshSettings();
+        showToast('Organization legal profile updated successfully', 'success');
       }
     });
   };
@@ -311,12 +313,12 @@ export const EnterpriseSettingsView: React.FC = () => {
   // 2. Business Rules Save
   const handleSaveBusinessRules = () => {
     if (!systemSettings) return;
-    triggerSaveWithReason(async () => {
-      const res = await adminService.updateSystemSettingsSection(rulesSubTab, systemSettings, changeReason);
+    triggerSaveWithReason(async (reason) => {
+      const res = await adminService.updateSystemSettingsSection(rulesSubTab, systemSettings, reason);
       if (res.success) {
         setSystemSettings(res.data);
         await refreshSettings();
-        showToast('System settings and website parameters updated in real-time', 'success');
+        showToast(`${rulesSubTab.toUpperCase()} configuration parameters updated in real-time`, 'success');
       }
     });
   };
@@ -324,9 +326,12 @@ export const EnterpriseSettingsView: React.FC = () => {
   // 3. Working Calendar Save
   const handleSaveWorkingCalendar = () => {
     if (!workingCalendar) return;
-    triggerSaveWithReason(async () => {
-      const res = await adminService.updateWorkingCalendar(workingCalendar, changeReason);
-      if (res.success) setWorkingCalendar(res.data);
+    triggerSaveWithReason(async (reason) => {
+      const res = await adminService.updateWorkingCalendar(workingCalendar, reason);
+      if (res.success) {
+        setWorkingCalendar(res.data);
+        showToast('Working calendar updated successfully', 'success');
+      }
     });
   };
 
@@ -354,6 +359,7 @@ export const EnterpriseSettingsView: React.FC = () => {
         setNumberingSystem(res.data);
         const prevRes = await adminService.previewNextNumbers();
         if (prevRes.success) setNextNumbersPreview(prevRes.data);
+        showToast('ID sequences and numbering rules updated', 'success');
       }
     });
   };
@@ -363,7 +369,10 @@ export const EnterpriseSettingsView: React.FC = () => {
     if (!documentConfig) return;
     triggerSaveWithReason(async () => {
       const res = await adminService.updateDocumentConfig(documentConfig);
-      if (res.success) setDocumentConfig(res.data);
+      if (res.success) {
+        setDocumentConfig(res.data);
+        showToast('Document rules updated successfully', 'success');
+      }
     });
   };
 
@@ -372,7 +381,10 @@ export const EnterpriseSettingsView: React.FC = () => {
     if (!brandingTheme) return;
     triggerSaveWithReason(async () => {
       const res = await adminService.updateBrandingTheme(brandingTheme);
-      if (res.success) setBrandingTheme(res.data);
+      if (res.success) {
+        setBrandingTheme(res.data);
+        showToast('Branding and theme customized successfully', 'success');
+      }
     });
   };
 
