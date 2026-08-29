@@ -141,6 +141,241 @@ const DEFAULT_ORG_PROFILE: OrganizationProfile = {
   numberFormat: 'STANDARD',
 };
 
+const DEFAULT_WORKING_CALENDAR: WorkingCalendar = {
+  id: 'cal_wabi_standard',
+  businessDays: [1, 2, 3, 4, 5],
+  saturdayWorking: true,
+  saturdayWorkingHours: '08:30 - 12:30',
+  weekendDays: [0, 6],
+  dailyWorkingHours: {
+    start: '08:30',
+    end: '17:30',
+    lunchBreakStart: '12:30',
+    lunchBreakEnd: '13:30',
+  },
+  holidays: [
+    { id: 'hol_01', name: 'Ethiopian New Year (Enkutatash)', localName: 'እንቁጣጣሽ', date: '2026-09-11', isRecurring: true, description: 'First day of the Ethiopian calendar year (Meskerem 1)' },
+    { id: 'hol_02', name: 'Finding of the True Cross (Meskel)', localName: 'መስቀል', date: '2026-09-27', isRecurring: true, description: 'Commemoration of discovery of True Cross (Meskerem 17)' },
+    { id: 'hol_03', name: 'Mawlid (Birth of the Prophet Muhammad)', localName: 'መውሊድ', date: '2026-09-05', isRecurring: true, description: 'Islamic religious holiday' },
+    { id: 'hol_04', name: 'Ethiopian Christmas (Genna)', localName: 'ገና', date: '2027-01-07', isRecurring: true, description: 'Orthodox Christmas celebration (Tahsas 29)' },
+    { id: 'hol_05', name: 'Epiphany (Timket)', localName: 'ጥምቀት', date: '2027-01-19', isRecurring: true, description: 'Commemoration of Baptism of Jesus (Tir 11)' },
+    { id: 'hol_06', name: 'Victory of Adwa Day', localName: 'የአድዋ ድል በዓል', date: '2027-03-02', isRecurring: true, description: 'Commemoration of historic victory at Battle of Adwa' },
+    { id: 'hol_07', name: 'Good Friday (Siklet)', localName: 'ስቅለት', date: '2027-04-30', isRecurring: true, description: 'Orthodox Holy Christian Friday' },
+    { id: 'hol_08', name: 'Ethiopian Easter (Fasika)', localName: 'ፋሲካ', date: '2027-05-02', isRecurring: true, description: 'Orthodox Resurrection Sunday' },
+    { id: 'hol_09', name: 'Eid al-Fitr', localName: 'ኢድ አል-ፈጥር', date: '2027-03-31', isRecurring: true, description: 'End of Ramadan celebrations' },
+    { id: 'hol_10', name: 'Patriots Victory Day', localName: 'የአርበኞች ቀን', date: '2027-05-05', isRecurring: true, description: 'Celebration of liberation in 1941 (Miyazya 27)' },
+    { id: 'hol_11', name: 'Eid al-Adha (Arefa)', localName: 'አረፋ', date: '2027-06-07', isRecurring: true, description: 'Feast of Sacrifice' },
+    { id: 'hol_12', name: 'Downfall of the Derg', localName: 'ግንቦት 20', date: '2027-05-28', isRecurring: true, description: 'National Day (Ginbot 20)' },
+  ],
+  specialClosures: [
+    { id: 'cls_01', title: 'Annual General Assembly (AGM) 2026', startDate: '2026-10-24', endDate: '2026-10-24', reason: 'Official delegate attendance at Wabi SACCO Annual General Meeting', status: 'PLANNED', approvedBy: 'Board of Directors' },
+    { id: 'cls_02', title: 'Fiscal Year-End Financial Audit Closeout', startDate: '2027-07-08', endDate: '2027-07-09', reason: 'Annual ledger closeout, interest postings reconciliation, and vault count', status: 'PLANNED', approvedBy: 'General Manager' },
+  ],
+  updatedAt: '2026-08-16T00:00:00Z',
+};
+
+const DEFAULT_FEATURE_FLAGS: FeatureFlag[] = [
+  { key: 'ENABLE_TELEGRAM_NOTIFICATIONS', name: 'Telegram Bot Notifications', description: 'Real-time transaction alerts and OTP codes delivered via Telegram official bot channel', category: 'CHANNELS', isEnabled: true, requiresMfaToToggle: false, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_SMS_GATEWAY', name: 'Ethio Telecom SMS Gateway', description: 'Deliver SMS receipts and 2FA authentication codes via direct shortcode channel', category: 'CHANNELS', isEnabled: true, requiresMfaToToggle: true, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_ONLINE_MEMBER_REGISTRATION', name: 'Public Member Self-Registration', description: 'Allow prospective members to apply, submit KYC, and upload deposit slips online', category: 'CORE', isEnabled: true, requiresMfaToToggle: false, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_TIME_DEPOSITS', name: 'Term & Fixed Deposits Module', description: 'Enable fixed term deposit agreements with maturity certificates and auto-rollovers', category: 'CORE', isEnabled: true, requiresMfaToToggle: false, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_SHARE_VOLUNTARY_CONVERSION', name: 'Voluntary Savings Share Conversion', description: 'Permit members to instantly purchase additional share equity using voluntary savings balances', category: 'CORE', isEnabled: true, requiresMfaToToggle: false, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_MAKER_CHECKER_DUAL_CONTROL', name: 'Maker-Checker Dual Control Enforcement', description: 'Require four-eyes manager sign-off on transactions and withdrawals over threshold', category: 'SECURITY', isEnabled: true, requiresMfaToToggle: true, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_MEMBER_SUPPORT_LIVE_CHAT', name: 'Real-Time Member Support Chat', description: 'Interactive help desk live messaging between members and Customer Service Officers', category: 'CHANNELS', isEnabled: true, requiresMfaToToggle: false, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_AI_PREDICTIVE_FRAUD_ENGINE', name: 'Predictive AI Risk & Fraud Scoring', description: 'Real-time machine evaluation of transaction velocity, geolocation anomalies, and credit delinquency', category: 'INNOVATION', isEnabled: true, requiresMfaToToggle: true, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_BIOMETRIC_MFA_ENFORCEMENT', name: 'Mandatory Multi-Factor Authentication', description: 'Enforce TOTP / SMS OTP verification for all staff and privileged financial operations', category: 'SECURITY', isEnabled: true, requiresMfaToToggle: true, updatedAt: '2026-08-16T00:00:00Z' },
+  { key: 'ENABLE_AUTOMATED_INTEREST_POSTING', name: 'Automated Scheduled Interest Runs', description: 'Execute periodic monthly and semi-annual savings interest calculations automatically', category: 'CORE', isEnabled: true, requiresMfaToToggle: true, updatedAt: '2026-08-16T00:00:00Z' },
+];
+
+const DEFAULT_NUMBERING_SYSTEM: NumberingSystem = {
+  membershipId: { prefix: 'WB', sequenceLength: 6, currentNumber: 150, pattern: '{PREFIX}{SEQ:6}' },
+  transactionId: { prefix: 'WBS', sequenceLength: 8, currentNumber: 110, pattern: '{PREFIX}-{YYYY}-{SEQ:8}' },
+  journalNumber: { prefix: 'JNL', sequenceLength: 6, currentNumber: 110, pattern: '{PREFIX}-{YYYY}-{SEQ:6}' },
+  voucherNumber: { prefix: 'VCH', sequenceLength: 6, currentNumber: 50, pattern: '{PREFIX}-{YYYY}-{SEQ:6}' },
+  loanNumber: { prefix: 'LN', sequenceLength: 6, currentNumber: 45, pattern: '{PREFIX}-{YYYY}-{SEQ:6}' },
+  ticketNumber: { prefix: 'TKT', sequenceLength: 5, currentNumber: 25, pattern: '{PREFIX}-{YYYY}-{SEQ:5}' },
+  receiptNumber: { prefix: 'RCP', sequenceLength: 6, currentNumber: 90, pattern: '{PREFIX}-{YYYY}-{SEQ:6}' },
+  shareCertificateNumber: { prefix: 'CERT-WB', sequenceLength: 4, currentNumber: 150, pattern: '{PREFIX}-{YYYY}-{SEQ:4}' },
+  updatedAt: '2026-08-16T00:00:00Z',
+};
+
+const DEFAULT_DOCUMENT_CONFIG: DocumentConfig = {
+  maxUploadSizeMb: 15,
+  allowedExtensions: ['pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx', 'xlsx'],
+  imageCompressionQuality: 85,
+  maxImageDimensionPx: 2048,
+  retentionYears: {
+    memberKyc: 10,
+    loanDocuments: 10,
+    financialReceipts: 7,
+    auditTrail: 5,
+    systemLogs: 3,
+  },
+  storageProvider: 'LOCAL',
+  updatedAt: '2026-08-16T00:00:00Z',
+};
+
+const DEFAULT_BRANDING_THEME: BrandingTheme = {
+  themeMode: 'LIGHT',
+  primaryColor: '#2563eb',
+  secondaryColor: '#0d9488',
+  accentColor: '#f59e0b',
+  logoUrl: '/assets/wabi-logo.png',
+  faviconUrl: '/assets/wabi-logo.png',
+  loginBackgroundUrl: '',
+  displayFont: 'Plus Jakarta Sans',
+  bodyFont: 'Inter',
+  borderRadiusPx: 8,
+  updatedAt: '2026-08-16T00:00:00Z',
+};
+
+const DEFAULT_LOCALIZATION_PACKS: LocalizationPack[] = [
+  {
+    languageCode: 'en',
+    languageName: 'English',
+    nativeName: 'English (US)',
+    isDefault: true,
+    isRtl: false,
+    totalKeys: 42,
+    translations: {
+      'app.title': 'Wabi SACCO Management System',
+      'app.tagline': 'Enterprise Financial Cooperatives Platform',
+      'nav.dashboard': 'Dashboard',
+      'nav.members': 'Member Master',
+      'nav.savings': 'Savings Accounts',
+      'nav.shares': 'Share Capital',
+      'nav.loans': 'Loan Portfolio',
+      'nav.accounting': 'Chart of Accounts & GL',
+      'nav.reports': 'Central Reports Hub',
+      'nav.settings': 'Administration & System Configuration',
+      'common.save': 'Save Changes',
+      'common.cancel': 'Cancel',
+      'common.edit': 'Edit',
+      'common.delete': 'Delete',
+      'common.search': 'Search records...',
+      'common.status': 'Status',
+      'common.actions': 'Actions',
+      'common.active': 'Active',
+      'common.pending': 'Pending',
+      'common.approved': 'Approved',
+      'common.rejected': 'Rejected',
+    },
+    updatedAt: '2026-08-16T00:00:00Z',
+  },
+  {
+    languageCode: 'am',
+    languageName: 'Amharic',
+    nativeName: 'አማርኛ',
+    isDefault: false,
+    isRtl: false,
+    totalKeys: 42,
+    translations: {
+      'app.title': 'ዋቢ የቁጠባና ብድር ኅብረት ሥራ ማኔጅመንት ሲስተም',
+      'app.tagline': 'የላቀ የገንዘብ ተቋማት ፕላትፎርም',
+      'nav.dashboard': 'ዳሽቦርድ',
+      'nav.members': 'የአባላት መዝገብ',
+      'nav.savings': 'የቁጠባ ሂሳቦች',
+      'nav.shares': 'የአክሲዮን ካፒታል',
+      'nav.loans': 'የብድር አገልግሎት',
+      'nav.accounting': 'የሂሳብ መደቦችና አጠቃላይ ሌጀር',
+      'nav.reports': 'የሪፖርቶች ማዕከል',
+      'nav.settings': 'የአስተዳደርና ሲስተም ቅንብሮች',
+      'common.save': 'ለውጦችን መዝግብ',
+      'common.cancel': 'ሰርዝ',
+      'common.edit': 'አስተካክል',
+      'common.delete': 'አስወግድ',
+      'common.search': 'መዝገቦችን ፈልግ...',
+      'common.status': 'ሁኔታ',
+      'common.actions': 'ተግባራት',
+      'common.active': 'ንቁ',
+      'common.pending': 'በመጠባበቅ ላይ',
+      'common.approved': 'የጸደቀ',
+      'common.rejected': 'ውድቅ የተደረገ',
+    },
+    updatedAt: '2026-08-16T00:00:00Z',
+  },
+  {
+    languageCode: 'om',
+    languageName: 'Afaan Oromoo',
+    nativeName: 'Afaan Oromoo',
+    isDefault: false,
+    isRtl: false,
+    totalKeys: 42,
+    translations: {
+      'app.title': 'Sirna Bulchiinsa Waldaa Qusannaa fi Liqaa Waabii',
+      'app.tagline': 'Dhaabbata Faayinaansii Gamtaa Sadarkaa Ol’aanaa',
+      'nav.dashboard': 'Gabaasa Waliigalaa',
+      'nav.members': 'Galmee Miseensotaa',
+      'nav.savings': 'Herreega Qusannaa',
+      'nav.shares': 'Kaappitaala Aksiyoonaa',
+      'nav.loans': 'Tajaajila Liqaa',
+      'nav.accounting': 'Akkaawuntii fi Leejara Waliigalaa',
+      'nav.reports': 'Giddugala Gabaasaa',
+      'nav.settings': 'Bulchiinsaa fi Qindaa’ina Sirnichaa',
+      'common.save': 'Jijjiirama Galmeessi',
+      'common.cancel': 'Dhiisi',
+      'common.edit': 'Gulaali',
+      'common.delete': 'Haqi',
+      'common.search': 'Galmee barbaadi...',
+      'common.status': 'Haala',
+      'common.actions': 'Tarkaanfiiwwan',
+      'common.active': 'Hojirra kan jiru',
+      'common.pending': 'Eeggachaa kan jiru',
+      'common.approved': 'Kan mirkanaa’e',
+      'common.rejected': 'Kufaa kan ta’e',
+    },
+    updatedAt: '2026-08-16T00:00:00Z',
+  },
+];
+
+const DEFAULT_HEALTH_DATA: SystemHealthData = {
+  server: {
+    status: 'OPERATIONAL',
+    uptimeSeconds: 86400,
+    nodeVersion: 'v20.18.0',
+    platform: 'Linux / Vercel Edge Serverless',
+    hostname: 'wabi-sacco-core-01',
+    timeZone: 'Africa/Addis_Ababa',
+    currentTime: new Date().toISOString(),
+  },
+  resources: {
+    cpuCount: 8,
+    cpuModel: 'Intel Core Enterprise vCPU',
+    cpuLoadAverage: [0.12, 0.08, 0.05],
+    memoryUsageMb: 245,
+    memoryTotalMb: 1024,
+    memoryPercent: 24,
+    processMemoryMb: 85,
+  },
+  database: {
+    engine: 'Wabi SACCO ACID JSON Engine v2.4',
+    schemaVersion: '2026.08.20',
+    totalCollections: 24,
+    recordCounts: {
+      members: 150,
+      activeMembers: 142,
+      savingsAccounts: 185,
+      loans: 45,
+      activeLoans: 38,
+      transactions: 2450,
+      journals: 110,
+    },
+    lastSnapshotSync: new Date().toISOString(),
+    status: 'HEALTHY',
+  },
+  services: [
+    { name: 'Core Banking Engine', status: 'ONLINE', latencyMs: 2.1 },
+    { name: 'Accounting & GL Tier-5', status: 'ONLINE', latencyMs: 3.4 },
+    { name: 'Ethio Telecom SMS Gateway', status: 'ONLINE', latencyMs: 18.2 },
+    { name: 'Telegram Bot Verification Webhook', status: 'ONLINE', latencyMs: 14.5 },
+    { name: 'AI Predictive Fraud & Credit Scorer', status: 'ONLINE', latencyMs: 4.8 },
+  ],
+  alertsSummary: {
+    openSecurityAlerts: 0,
+    systemErrorsLast24h: 0,
+  },
+};
+
 export const EnterpriseSettingsView: React.FC = () => {
   const { user } = useAuth();
   const { refreshSettings } = useSettings();
@@ -157,15 +392,24 @@ export const EnterpriseSettingsView: React.FC = () => {
 
   // Core Data States with solid defaults
   const [orgProfile, setOrgProfile] = useState<OrganizationProfile>(DEFAULT_ORG_PROFILE);
-  const [workingCalendar, setWorkingCalendar] = useState<WorkingCalendar | null>(null);
-  const [featureFlags, setFeatureFlags] = useState<FeatureFlag[]>([]);
-  const [localizationPacks, setLocalizationPacks] = useState<LocalizationPack[]>([]);
-  const [numberingSystem, setNumberingSystem] = useState<NumberingSystem | null>(null);
-  const [nextNumbersPreview, setNextNumbersPreview] = useState<Record<string, string>>({});
-  const [documentConfig, setDocumentConfig] = useState<DocumentConfig | null>(null);
-  const [brandingTheme, setBrandingTheme] = useState<BrandingTheme | null>(null);
+  const [workingCalendar, setWorkingCalendar] = useState<WorkingCalendar>(DEFAULT_WORKING_CALENDAR);
+  const [featureFlags, setFeatureFlags] = useState<FeatureFlag[]>(DEFAULT_FEATURE_FLAGS);
+  const [localizationPacks, setLocalizationPacks] = useState<LocalizationPack[]>(DEFAULT_LOCALIZATION_PACKS);
+  const [numberingSystem, setNumberingSystem] = useState<NumberingSystem>(DEFAULT_NUMBERING_SYSTEM);
+  const [nextNumbersPreview, setNextNumbersPreview] = useState<Record<string, string>>({
+    membershipId: 'WB000151',
+    transactionId: 'WBS-2026-00000111',
+    journalNumber: 'JNL-2026-000111',
+    voucherNumber: 'VCH-2026-000051',
+    loanNumber: 'LN-2026-000046',
+    ticketNumber: 'TKT-2026-00026',
+    receiptNumber: 'RCP-2026-000091',
+    shareCertificateNumber: 'CERT-WB-2026-0151',
+  });
+  const [documentConfig, setDocumentConfig] = useState<DocumentConfig>(DEFAULT_DOCUMENT_CONFIG);
+  const [brandingTheme, setBrandingTheme] = useState<BrandingTheme>(DEFAULT_BRANDING_THEME);
   const [systemSettings, setSystemSettings] = useState<SystemSettings>(DEFAULT_SETTINGS);
-  const [healthData, setHealthData] = useState<SystemHealthData | null>(null);
+  const [healthData, setHealthData] = useState<SystemHealthData | null>(DEFAULT_HEALTH_DATA);
   const [auditLogs, setAuditLogs] = useState<ConfigAuditLog[]>([]);
 
   // Sub-tab states

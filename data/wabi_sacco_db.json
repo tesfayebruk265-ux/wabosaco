@@ -14,9 +14,9 @@
       "failedLoginAttempts": 0,
       "lockedUntil": null,
       "passwordChangedAt": "2025-01-10T08:00:00Z",
-      "lastLoginAt": "2026-08-29T08:01:10.477Z",
+      "lastLoginAt": "2026-08-29T08:37:16.735Z",
       "createdAt": "2025-01-10T08:00:00Z",
-      "updatedAt": "2026-08-29T08:01:10.477Z"
+      "updatedAt": "2026-08-29T08:37:16.735Z"
     },
     {
       "id": "usr_manager_1",
@@ -2421,9 +2421,40 @@
       "expiresAt": "2026-09-05T08:01:10.561Z",
       "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
       "ipAddress": "127.0.0.1"
+    },
+    {
+      "id": "rtk_6f6cb4e6-9455-456b-b593-63acf1da6a75",
+      "userId": "usr_admin_1",
+      "tokenHash": "20b1ee3afdaa92816f8d57006d165b58faf79bbd8a154a649cfdb43888f2a203",
+      "familyId": "fam_6baf8c79-b809-4027-ba91-fccc7a41223d",
+      "isRevoked": false,
+      "createdAt": "2026-08-29T08:37:16.735Z",
+      "expiresAt": "2026-09-05T08:37:16.794Z",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "ipAddress": "127.0.0.1"
     }
   ],
   "sessions": [
+    {
+      "id": "ses_a97ab766-3b53-4898-a426-59b6f378529b",
+      "accessTokenId": "ses_a97ab766-3b53-4898-a426-59b6f378529b",
+      "userId": "usr_admin_1",
+      "username": "admin.sacco",
+      "userRole": "ADMIN",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "browser": "Google Chrome",
+      "os": "Windows 11 / 10",
+      "deviceType": "DESKTOP",
+      "deviceFingerprint": "dfp_31d92b7e494acae0",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "createdAt": "2026-08-29T08:37:16.735Z",
+      "lastActivityAt": "2026-08-29T08:37:16.735Z",
+      "expiresAt": "2026-08-29T08:52:16.847Z",
+      "isActive": true,
+      "mfaVerified": false,
+      "riskScore": 5
+    },
     {
       "id": "ses_aadb2431-8e6d-4b74-8aaf-ae94c072940a",
       "accessTokenId": "ses_aadb2431-8e6d-4b74-8aaf-ae94c072940a",
@@ -2727,6 +2758,17 @@
   ],
   "passwordResetTokens": [],
   "loginHistory": [
+    {
+      "id": "log_e6e15ecc-dac9-4b91-920a-cf5fd2405ceb",
+      "userId": "usr_admin_1",
+      "identifierAttempted": "admin.sacco",
+      "status": "SUCCESS",
+      "failureReason": null,
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "deviceInfo": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "timestamp": "2026-08-29T08:37:17.000Z"
+    },
     {
       "id": "log_e4abf5bc-e00f-4296-869a-dab2359b13aa",
       "userId": "usr_admin_1",
@@ -3202,6 +3244,22 @@
     }
   ],
   "securityEvents": [
+    {
+      "id": "sec_960bc950-7c86-4bbe-81e1-9f45179a80ce",
+      "eventType": "LOGIN",
+      "userId": "usr_admin_1",
+      "actorId": null,
+      "severity": "INFO",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "details": {
+        "role": "ADMIN",
+        "loginTime": "2026-08-29T08:37:16.735Z",
+        "sessionId": "ses_a97ab766-3b53-4898-a426-59b6f378529b",
+        "riskScore": 5
+      },
+      "timestamp": "2026-08-29T08:37:17.070Z"
+    },
     {
       "id": "sec_ef8fb7dd-e0a7-4fd8-81f7-03199296b3c4",
       "eventType": "LOGIN",
@@ -22981,7 +23039,7 @@
       "location": "Addis Ababa (Headquarters LAN), Ethiopia",
       "isApproved": true,
       "approvedAt": "2026-08-28T17:46:35.841Z",
-      "lastUsedAt": "2026-08-29T08:01:10.477Z",
+      "lastUsedAt": "2026-08-29T08:37:16.735Z",
       "isRevoked": false,
       "riskScore": 30,
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
@@ -23020,6 +23078,24 @@
   },
   "passwordHistory": [],
   "riskAssessments": [
+    {
+      "id": "risk_67f7ad74-3ddd-476e-850a-16b4b5e5b674",
+      "contextType": "LOGIN",
+      "entityId": "usr_admin_1",
+      "userId": "usr_admin_1",
+      "userFullName": "Yohannes Girma (System Admin)",
+      "riskScore": 5,
+      "riskLevel": "LOW",
+      "riskFactors": [],
+      "actionTaken": "ALLOWED",
+      "ipAddress": "127.0.0.1",
+      "location": "Addis Ababa (Headquarters LAN), Ethiopia",
+      "details": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+        "deviceFingerprint": "dfp_31d92b7e494acae0"
+      },
+      "createdAt": "2026-08-29T08:37:16.668Z"
+    },
     {
       "id": "risk_9247394f-0fe5-407d-aab4-d4ea87e8687d",
       "contextType": "LOGIN",
