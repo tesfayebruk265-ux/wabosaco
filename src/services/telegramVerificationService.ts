@@ -19,11 +19,14 @@ export const telegramVerificationService = {
   botUrl: 'https://t.me/wabbisaccobot',
 
   /**
-   * Generates a deep link URL directly to the Telegram bot with the registration verification parameter.
+   * Generates a deep link URL directly to the Telegram bot with the registration verification parameter and code.
    */
-  getBotLink(phone?: string): string {
+  getBotLink(phone?: string, code?: string): string {
     if (!phone) return this.botUrl;
     const cleanPhone = phone.replace(/[\s()-]/g, '').replace(/^\+/, '');
+    if (code) {
+      return `https://t.me/${this.botUsername}?start=reg_${cleanPhone}_${code}`;
+    }
     return `https://t.me/${this.botUsername}?start=reg_${cleanPhone}`;
   },
 
@@ -39,7 +42,7 @@ export const telegramVerificationService = {
    */
   async sendVerificationOtp(params: SendTelegramOtpParams): Promise<SendTelegramOtpResult> {
     const code = params.verificationCode || this.generateCode();
-    const botUrl = this.getBotLink(params.phone);
+    const botUrl = this.getBotLink(params.phone, code);
 
     try {
       const response = await apiClient.post<{ success: boolean; error?: string }>('/telegram/send-otp', {

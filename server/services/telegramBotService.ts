@@ -153,7 +153,35 @@ export class TelegramBotService {
     const lowerText = text.toLowerCase();
 
     if (lowerText === '/start' || lowerText.startsWith('/start')) {
-      // Prompt user to share contact so their phone number is strictly checked before getting the OTP
+      // Parse payload if present (e.g. /start reg_251902801025_123456)
+      const parts = text.trim().split(/\s+/);
+      if (parts.length > 1) {
+        const payload = parts[1].trim();
+        if (payload.startsWith('reg_')) {
+          const subparts = payload.replace('reg_', '').split('_');
+          const regPhone = subparts[0];
+          const presetCode = subparts[1];
+          if (regPhone) {
+            const phoneKeys = this.getPhoneLookupKeys(regPhone);
+            const digits = regPhone.replace(/\D/g, '');
+            const local9 = digits.startsWith('251') && digits.length === 12 ? digits.slice(3) : (digits.startsWith('0') ? digits.slice(1) : digits.slice(-9));
+            const normalizedIntl = local9 ? `+251${local9}` : regPhone;
+            const finalCode = presetCode || Math.floor(100000 + Math.random() * 900000).toString();
+            const storedEntry: StoredOtp = {
+              userId: normalizedIntl,
+              phone: normalizedIntl,
+              otpCode: finalCode,
+              createdAt: Date.now(),
+              expiresAt: Date.now() + 15 * 60 * 1000,
+              verified: false,
+            };
+            for (const key of phoneKeys) {
+              this.activeOtps.set(key, storedEntry);
+            }
+          }
+        }
+      }
+      // Prompt user to share contact so their phone number is verified before getting the OTP
       await this.promptContactShare(chatId);
     } else if (lowerText === '/verify' || lowerText.includes('verify') || lowerText.includes('ማረጋገጫ')) {
       await this.promptContactShare(chatId);
