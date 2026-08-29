@@ -702,7 +702,7 @@ export class ProductionDataService {
         organizationProfile: true,
         workingCalendar: true,
         numberingSystem: true,
-        productionAdminAccount: 'usr_admin_1 (Yohannes Girma - System Admin)',
+        productionAdminAccount: 'usr_admin_1 (Samuel Ambaw - System Admin)',
       },
       dependencyExecutionOrder,
     };

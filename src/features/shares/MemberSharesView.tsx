@@ -823,7 +823,7 @@ export const MemberSharesView: React.FC = () => {
             <div className="grid grid-cols-3 gap-3 pt-3 border-t border-amber-800/30 text-center text-[11px]">
               <div>
                 <div className="h-8 border-b border-slate-400 dark:border-slate-600 flex items-end justify-center font-serif text-slate-600 dark:text-slate-300 pb-0.5 text-xs">
-                  Yohannes Girma
+                  Samuel Ambaw
                 </div>
                 <span className="text-[10px] text-slate-500 uppercase block mt-0.5">System Admin</span>
               </div>

@@ -33,7 +33,7 @@ const ADMIN_USER = {
   id: 'usr_admin_1',
   username: 'admin.sacco',
   email: 'admin@wabisacco.et',
-  fullName: 'Yohannes Girma (System Admin)',
+  fullName: 'Samuel Ambaw (System Admin)',
   role: 'ADMIN',
   isActive: true,
   phoneNumber: '+251911223344',

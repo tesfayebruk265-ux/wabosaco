@@ -3343,7 +3343,7 @@ class Database {
       id: 'usr_admin_1',
       username: 'admin.sacco',
       email: 'admin@wabisacco.et',
-      fullName: 'Yohannes Girma (System Admin)',
+      fullName: 'Samuel Ambaw (System Admin)',
       phoneNumber: '+251911223344',
       passwordHash: '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', // admin123!
       salt: 'c4ca4238a0b923820dcc509a6f75849b',

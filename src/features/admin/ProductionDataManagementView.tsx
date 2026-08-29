@@ -444,7 +444,7 @@ export const ProductionDataManagementView: React.FC = () => {
             <li className="flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
               <span>
-                <strong>Primary Production Administrator:</strong> <code className="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-emerald-600 dark:text-emerald-400">usr_admin_1</code> (Yohannes Girma - System Admin) preserved with full governance access.
+                <strong>Primary Production Administrator:</strong> <code className="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded text-emerald-600 dark:text-emerald-400">usr_admin_1</code> (Samuel Ambaw - System Admin) preserved with full governance access.
               </span>
             </li>
           </ul>

@@ -7,7 +7,7 @@ export const DEMO_CREDENTIALS: Record<RoleCode, { username: string; password: st
   ADMIN: {
     username: 'admin.sacco',
     password: 'AdminPassword123!',
-    name: 'Yohannes Girma (System Admin)',
+    name: 'Samuel Ambaw (System Admin)',
   },
   MANAGER: {
     username: 'manager.alemu',
@@ -44,7 +44,7 @@ export const DEMO_PROFILES: Record<RoleCode, { user: User; tokens: AuthTokens; p
       id: 'usr_admin_1',
       username: 'admin.sacco',
       email: 'admin@wabisacco.et',
-      fullName: 'Yohannes Girma (System Admin)',
+      fullName: 'Samuel Ambaw (System Admin)',
       role: 'ADMIN',
       isActive: true,
       phoneNumber: '+251911223344',

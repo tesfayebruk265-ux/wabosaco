@@ -6,7 +6,7 @@
       "username": "admin.sacco",
       "email": "admin@wabisacco.et",
       "phoneNumber": "+251911223344",
-      "fullName": "Yohannes Girma (System Admin)",
+      "fullName": "Samuel Ambaw (System Admin)",
       "passwordHash": "f25750e3ec3914a4a0199a93c275950d4b4d387947ccb5b5a92e19719a10ca50ff85b4fc653a5cf8446cad83d506b01f2ec5757d84598e7851824af7c0f4d237",
       "salt": "2cbd859a02f628f3b65a705894ddc263",
       "status": "ACTIVE",
@@ -3992,7 +3992,7 @@
     {
       "id": "aud_rep_1787942113561",
       "actorId": "usr_admin_1",
-      "actorName": "Yohannes Girma (System Admin)",
+      "actorName": "Samuel Ambaw (System Admin)",
       "actorRole": "ADMIN",
       "action": "GENERATE_REPORT",
       "resource": "REPORTS",
@@ -4014,7 +4014,7 @@
     {
       "id": "aud_rep_1787942113274",
       "actorId": "usr_admin_1",
-      "actorName": "Yohannes Girma (System Admin)",
+      "actorName": "Samuel Ambaw (System Admin)",
       "actorRole": "ADMIN",
       "action": "GENERATE_REPORT",
       "resource": "REPORTS",
@@ -4156,7 +4156,7 @@
     {
       "id": "aud_1786966267667",
       "actorId": "usr_admin_1",
-      "actorName": "Yohannes Girma (System Admin)",
+      "actorName": "Samuel Ambaw (System Admin)",
       "actorRole": "ADMIN",
       "action": "MIGRATION_BATCH_ROLLED_BACK",
       "resource": "migration_batches",
@@ -4182,7 +4182,7 @@
     {
       "id": "aud_1786966267613",
       "actorId": "usr_admin_1",
-      "actorName": "Yohannes Girma (System Admin)",
+      "actorName": "Samuel Ambaw (System Admin)",
       "actorRole": "ADMIN",
       "action": "MIGRATION_BATCH_INITIALIZED",
       "resource": "migration_batches",
@@ -4200,7 +4200,7 @@
     {
       "id": "aud_1786966267316",
       "actorId": "usr_admin_1",
-      "actorName": "Yohannes Girma (System Admin)",
+      "actorName": "Samuel Ambaw (System Admin)",
       "actorRole": "ADMIN",
       "action": "MIGRATION_BATCH_IMPORTED",
       "resource": "migration_batches",
@@ -4266,7 +4266,7 @@
     {
       "id": "aud_1786966190260",
       "actorId": "usr_admin_1",
-      "actorName": "Yohannes Girma (System Admin)",
+      "actorName": "Samuel Ambaw (System Admin)",
       "actorRole": "ADMIN",
       "action": "MIGRATION_BATCH_INITIALIZED",
       "resource": "migration_batches",
@@ -7637,7 +7637,7 @@
       "totalDebit": 5000,
       "totalCredit": 5000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-02-19T09:41:35.913Z"
@@ -7672,7 +7672,7 @@
       "totalDebit": 21000,
       "totalCredit": 21000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -7707,7 +7707,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -7742,7 +7742,7 @@
       "totalDebit": 40000,
       "totalCredit": 40000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -7777,7 +7777,7 @@
       "totalDebit": 12783,
       "totalCredit": 12783,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -7812,7 +7812,7 @@
       "totalDebit": 1469,
       "totalCredit": 1469,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -7847,7 +7847,7 @@
       "totalDebit": 10000,
       "totalCredit": 10000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-02-19T09:41:35.913Z"
@@ -7882,7 +7882,7 @@
       "totalDebit": 18600,
       "totalCredit": 18600,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -7917,7 +7917,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-02-19T09:41:35.913Z"
@@ -7952,7 +7952,7 @@
       "totalDebit": 24000,
       "totalCredit": 24000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -7987,7 +7987,7 @@
       "totalDebit": 31000,
       "totalCredit": 31000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8022,7 +8022,7 @@
       "totalDebit": 20000,
       "totalCredit": 20000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-02-19T09:41:35.913Z"
@@ -8057,7 +8057,7 @@
       "totalDebit": 26400,
       "totalCredit": 26400,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8092,7 +8092,7 @@
       "totalDebit": 120000,
       "totalCredit": 120000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -8127,7 +8127,7 @@
       "totalDebit": 17599,
       "totalCredit": 17599,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8162,7 +8162,7 @@
       "totalDebit": 5673,
       "totalCredit": 5673,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8197,7 +8197,7 @@
       "totalDebit": 25000,
       "totalCredit": 25000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-02-19T09:41:35.913Z"
@@ -8232,7 +8232,7 @@
       "totalDebit": 23400,
       "totalCredit": 23400,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8267,7 +8267,7 @@
       "totalDebit": 47000,
       "totalCredit": 47000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8302,7 +8302,7 @@
       "totalDebit": 30000,
       "totalCredit": 30000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-02-19T09:41:35.913Z"
@@ -8337,7 +8337,7 @@
       "totalDebit": 41400,
       "totalCredit": 41400,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8372,7 +8372,7 @@
       "totalDebit": 5000,
       "totalCredit": 5000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-03-21T09:41:35.913Z"
@@ -8407,7 +8407,7 @@
       "totalDebit": 17500,
       "totalCredit": 17500,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8442,7 +8442,7 @@
       "totalDebit": 23000,
       "totalCredit": 23000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8477,7 +8477,7 @@
       "totalDebit": 40000,
       "totalCredit": 40000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -8512,7 +8512,7 @@
       "totalDebit": 12783,
       "totalCredit": 12783,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8547,7 +8547,7 @@
       "totalDebit": 1469,
       "totalCredit": 1469,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8582,7 +8582,7 @@
       "totalDebit": 10000,
       "totalCredit": 10000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-03-21T09:41:35.913Z"
@@ -8617,7 +8617,7 @@
       "totalDebit": 13500,
       "totalCredit": 13500,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8652,7 +8652,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-03-21T09:41:35.913Z"
@@ -8687,7 +8687,7 @@
       "totalDebit": 11500,
       "totalCredit": 11500,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8722,7 +8722,7 @@
       "totalDebit": 39000,
       "totalCredit": 39000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8757,7 +8757,7 @@
       "totalDebit": 20000,
       "totalCredit": 20000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-03-21T09:41:35.913Z"
@@ -8792,7 +8792,7 @@
       "totalDebit": 36000,
       "totalCredit": 36000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8827,7 +8827,7 @@
       "totalDebit": 350000,
       "totalCredit": 350000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -8862,7 +8862,7 @@
       "totalDebit": 32072,
       "totalCredit": 32072,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8897,7 +8897,7 @@
       "totalDebit": 15776,
       "totalCredit": 15776,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -8932,7 +8932,7 @@
       "totalDebit": 25000,
       "totalCredit": 25000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-03-21T09:41:35.913Z"
@@ -8967,7 +8967,7 @@
       "totalDebit": 16500,
       "totalCredit": 16500,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9002,7 +9002,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9037,7 +9037,7 @@
       "totalDebit": 30000,
       "totalCredit": 30000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -9072,7 +9072,7 @@
       "totalDebit": 25600,
       "totalCredit": 25600,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9107,7 +9107,7 @@
       "totalDebit": 5000,
       "totalCredit": 5000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -9142,7 +9142,7 @@
       "totalDebit": 14400,
       "totalCredit": 14400,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9177,7 +9177,7 @@
       "totalDebit": 31000,
       "totalCredit": 31000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9212,7 +9212,7 @@
       "totalDebit": 40000,
       "totalCredit": 40000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -9247,7 +9247,7 @@
       "totalDebit": 9537,
       "totalCredit": 9537,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9282,7 +9282,7 @@
       "totalDebit": 1152,
       "totalCredit": 1152,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9317,7 +9317,7 @@
       "totalDebit": 10000,
       "totalCredit": 10000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -9352,7 +9352,7 @@
       "totalDebit": 12800,
       "totalCredit": 12800,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9387,7 +9387,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -9422,7 +9422,7 @@
       "totalDebit": 16400,
       "totalCredit": 16400,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9457,7 +9457,7 @@
       "totalDebit": 47000,
       "totalCredit": 47000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9492,7 +9492,7 @@
       "totalDebit": 20000,
       "totalCredit": 20000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-04-20T09:41:35.913Z"
@@ -9527,7 +9527,7 @@
       "totalDebit": 18000,
       "totalCredit": 18000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9562,7 +9562,7 @@
       "totalDebit": 120000,
       "totalCredit": 120000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -9597,7 +9597,7 @@
       "totalDebit": 13117,
       "totalCredit": 13117,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9632,7 +9632,7 @@
       "totalDebit": 4337,
       "totalCredit": 4337,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9667,7 +9667,7 @@
       "totalDebit": 25000,
       "totalCredit": 25000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -9702,7 +9702,7 @@
       "totalDebit": 12000,
       "totalCredit": 12000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9737,7 +9737,7 @@
       "totalDebit": 23000,
       "totalCredit": 23000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9772,7 +9772,7 @@
       "totalDebit": 30000,
       "totalCredit": 30000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -9807,7 +9807,7 @@
       "totalDebit": 21300,
       "totalCredit": 21300,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9842,7 +9842,7 @@
       "totalDebit": 5000,
       "totalCredit": 5000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -9877,7 +9877,7 @@
       "totalDebit": 10800,
       "totalCredit": 10800,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9912,7 +9912,7 @@
       "totalDebit": 39000,
       "totalCredit": 39000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -9947,7 +9947,7 @@
       "totalDebit": 40000,
       "totalCredit": 40000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -9982,7 +9982,7 @@
       "totalDebit": 6325,
       "totalCredit": 6325,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10017,7 +10017,7 @@
       "totalDebit": 801,
       "totalCredit": 801,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10052,7 +10052,7 @@
       "totalDebit": 10000,
       "totalCredit": 10000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -10087,7 +10087,7 @@
       "totalDebit": 8400,
       "totalCredit": 8400,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10122,7 +10122,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -10157,7 +10157,7 @@
       "totalDebit": 7200,
       "totalCredit": 7200,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10192,7 +10192,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10227,7 +10227,7 @@
       "totalDebit": 20000,
       "totalCredit": 20000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -10262,7 +10262,7 @@
       "totalDebit": 14800,
       "totalCredit": 14800,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10297,7 +10297,7 @@
       "totalDebit": 120000,
       "totalCredit": 120000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -10332,7 +10332,7 @@
       "totalDebit": 4318,
       "totalCredit": 4318,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10367,7 +10367,7 @@
       "totalDebit": 1500,
       "totalCredit": 1500,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10402,7 +10402,7 @@
       "totalDebit": 25000,
       "totalCredit": 25000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -10437,7 +10437,7 @@
       "totalDebit": 6800,
       "totalCredit": 6800,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10472,7 +10472,7 @@
       "totalDebit": 31000,
       "totalCredit": 31000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10507,7 +10507,7 @@
       "totalDebit": 30000,
       "totalCredit": 30000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -10542,7 +10542,7 @@
       "totalDebit": 13000,
       "totalCredit": 13000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10577,7 +10577,7 @@
       "totalDebit": 5000,
       "totalCredit": 5000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -10612,7 +10612,7 @@
       "totalDebit": 7400,
       "totalCredit": 7400,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10647,7 +10647,7 @@
       "totalDebit": 47000,
       "totalCredit": 47000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10682,7 +10682,7 @@
       "totalDebit": 40000,
       "totalCredit": 40000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -10717,7 +10717,7 @@
       "totalDebit": 3146,
       "totalCredit": 3146,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10752,7 +10752,7 @@
       "totalDebit": 417,
       "totalCredit": 417,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10787,7 +10787,7 @@
       "totalDebit": 10000,
       "totalCredit": 10000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -10822,7 +10822,7 @@
       "totalDebit": 6600,
       "totalCredit": 6600,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10857,7 +10857,7 @@
       "totalDebit": 15000,
       "totalCredit": 15000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -10892,7 +10892,7 @@
       "totalDebit": 4200,
       "totalCredit": 4200,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10927,7 +10927,7 @@
       "totalDebit": 23000,
       "totalCredit": 23000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -10962,7 +10962,7 @@
       "totalDebit": 20000,
       "totalCredit": 20000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -10997,7 +10997,7 @@
       "totalDebit": 4700,
       "totalCredit": 4700,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -11032,7 +11032,7 @@
       "totalDebit": 350000,
       "totalCredit": 350000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -11067,7 +11067,7 @@
       "totalDebit": 25000,
       "totalCredit": 25000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -11102,7 +11102,7 @@
       "totalDebit": 4000,
       "totalCredit": 4000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -11137,7 +11137,7 @@
       "totalDebit": 39000,
       "totalCredit": 39000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -11172,7 +11172,7 @@
       "totalDebit": 30000,
       "totalCredit": 30000,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -11207,7 +11207,7 @@
       "totalDebit": 7200,
       "totalCredit": 7200,
       "postedBy": "usr_admin_1",
-      "postedByName": "Yohannes Girma (System Admin)",
+      "postedByName": "Samuel Ambaw (System Admin)",
       "status": "POSTED",
       "source": "AUTOMATIC",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -11235,7 +11235,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11260,7 +11260,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11285,7 +11285,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11310,7 +11310,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11335,7 +11335,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11360,7 +11360,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11385,7 +11385,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11410,7 +11410,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11435,7 +11435,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11460,7 +11460,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11485,7 +11485,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11510,7 +11510,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11535,7 +11535,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11560,7 +11560,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11585,7 +11585,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11610,7 +11610,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11635,7 +11635,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11660,7 +11660,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11685,7 +11685,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11710,7 +11710,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11735,7 +11735,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11760,7 +11760,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11785,7 +11785,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11810,7 +11810,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11835,7 +11835,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11860,7 +11860,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11885,7 +11885,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11910,7 +11910,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11935,7 +11935,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11960,7 +11960,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -11985,7 +11985,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12010,7 +12010,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12035,7 +12035,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12060,7 +12060,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12085,7 +12085,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12110,7 +12110,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12135,7 +12135,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12160,7 +12160,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12185,7 +12185,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12210,7 +12210,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12235,7 +12235,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12260,7 +12260,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12285,7 +12285,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12310,7 +12310,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     },
@@ -12335,7 +12335,7 @@
       "status": "POSTED",
       "requiresApproval": false,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "createdAt": "2026-08-18T09:41:35.913Z"
     }
@@ -13438,9 +13438,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-02-19T09:41:35.913Z",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
@@ -13465,9 +13465,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-02-19T09:41:35.913Z",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
@@ -13492,9 +13492,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-02-19T09:41:35.913Z",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
@@ -13519,9 +13519,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-02-19T09:41:35.913Z",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
@@ -13546,9 +13546,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-02-19T09:41:35.913Z",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
@@ -13573,9 +13573,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-02-19T09:41:35.913Z",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
@@ -13600,9 +13600,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-03-21T09:41:35.913Z",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
@@ -13627,9 +13627,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-03-21T09:41:35.913Z",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
@@ -13654,9 +13654,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-03-21T09:41:35.913Z",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
@@ -13681,9 +13681,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-03-21T09:41:35.913Z",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
@@ -13708,9 +13708,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-03-21T09:41:35.913Z",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
@@ -13735,9 +13735,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-04-20T09:41:35.913Z",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
@@ -13762,9 +13762,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-04-20T09:41:35.913Z",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
@@ -13789,9 +13789,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-04-20T09:41:35.913Z",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
@@ -13816,9 +13816,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-04-20T09:41:35.913Z",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
@@ -13843,9 +13843,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-04-20T09:41:35.913Z",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
@@ -13870,9 +13870,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
@@ -13897,9 +13897,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
@@ -13924,9 +13924,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
@@ -13951,9 +13951,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
@@ -13978,9 +13978,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
@@ -14005,9 +14005,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
@@ -14032,9 +14032,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
@@ -14059,9 +14059,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
@@ -14086,9 +14086,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
@@ -14113,9 +14113,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
@@ -14140,9 +14140,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "createdAt": "2026-07-19T09:41:35.913Z"
     },
@@ -14167,9 +14167,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "createdAt": "2026-07-19T09:41:35.913Z"
     },
@@ -14194,9 +14194,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "createdAt": "2026-07-19T09:41:35.913Z"
     },
@@ -14221,9 +14221,9 @@
       "narration": "Initial compulsory statutory share capital subscription on membership approval.",
       "status": "POSTED",
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "createdAt": "2026-07-19T09:41:35.913Z"
     }
@@ -14241,7 +14241,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-02-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
     {
@@ -14256,7 +14256,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-02-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
     {
@@ -14271,7 +14271,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-02-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
     {
@@ -14286,7 +14286,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-02-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
     {
@@ -14301,7 +14301,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-02-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
     {
@@ -14316,7 +14316,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-02-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-02-19T09:41:35.913Z"
     },
     {
@@ -14331,7 +14331,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-03-21",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
     {
@@ -14346,7 +14346,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-03-21",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
     {
@@ -14361,7 +14361,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-03-21",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
     {
@@ -14376,7 +14376,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-03-21",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
     {
@@ -14391,7 +14391,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-03-21",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-03-21T09:41:35.913Z"
     },
     {
@@ -14406,7 +14406,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-04-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
     {
@@ -14421,7 +14421,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-04-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
     {
@@ -14436,7 +14436,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-04-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
     {
@@ -14451,7 +14451,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-04-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
     {
@@ -14466,7 +14466,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-04-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z"
     },
     {
@@ -14481,7 +14481,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-05-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
     {
@@ -14496,7 +14496,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-05-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
     {
@@ -14511,7 +14511,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-05-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
     {
@@ -14526,7 +14526,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-05-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
     {
@@ -14541,7 +14541,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-05-20",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-05-20T09:41:35.913Z"
     },
     {
@@ -14556,7 +14556,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-06-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
     {
@@ -14571,7 +14571,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-06-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
     {
@@ -14586,7 +14586,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-06-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
     {
@@ -14601,7 +14601,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-06-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
     {
@@ -14616,7 +14616,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-06-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-06-19T09:41:35.913Z"
     },
     {
@@ -14631,7 +14631,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-07-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-07-19T09:41:35.913Z"
     },
     {
@@ -14646,7 +14646,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-07-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-07-19T09:41:35.913Z"
     },
     {
@@ -14661,7 +14661,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-07-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-07-19T09:41:35.913Z"
     },
     {
@@ -14676,7 +14676,7 @@
       "parValuePerShare": 500,
       "issueDate": "2026-07-19",
       "status": "ACTIVE",
-      "issuedBy": "Yohannes Girma (System Admin)",
+      "issuedBy": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-07-19T09:41:35.913Z"
     }
   ],
@@ -14687,7 +14687,7 @@
       "newPrice": 500,
       "effectiveDate": "2026-08-18",
       "changedById": "usr_admin_1",
-      "changedByName": "Yohannes Girma (System Admin)",
+      "changedByName": "Samuel Ambaw (System Admin)",
       "reason": "Cooperative Statutory Par Value Initialization",
       "createdAt": "2026-08-18T09:41:35.902Z"
     }
@@ -14871,7 +14871,7 @@
         "disbursedAt": "2026-04-20T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 27217,
       "outstandingInterest": 284,
@@ -14889,7 +14889,7 @@
       "applicationDate": "2026-02-19",
       "approvedAt": "2026-04-20T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -14941,7 +14941,7 @@
         "disbursedAt": "2026-04-20T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 102401,
       "outstandingInterest": 1280,
@@ -14959,7 +14959,7 @@
       "applicationDate": "2026-02-19",
       "approvedAt": "2026-04-20T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15011,7 +15011,7 @@
         "disbursedAt": "2026-04-20T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 27217,
       "outstandingInterest": 284,
@@ -15029,7 +15029,7 @@
       "applicationDate": "2026-03-21",
       "approvedAt": "2026-04-20T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15081,7 +15081,7 @@
         "disbursedAt": "2026-04-20T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 317928,
       "outstandingInterest": 3709,
@@ -15099,7 +15099,7 @@
       "applicationDate": "2026-03-21",
       "approvedAt": "2026-04-20T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-04-20T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15151,7 +15151,7 @@
         "disbursedAt": "2026-05-20T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 30463,
       "outstandingInterest": 317,
@@ -15169,7 +15169,7 @@
       "applicationDate": "2026-04-20",
       "approvedAt": "2026-05-20T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-05-20T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15221,7 +15221,7 @@
         "disbursedAt": "2026-05-20T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 106883,
       "outstandingInterest": 1336,
@@ -15239,7 +15239,7 @@
       "applicationDate": "2026-04-20",
       "approvedAt": "2026-05-20T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-05-20T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15291,7 +15291,7 @@
         "disbursedAt": "2026-06-19T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 33675,
       "outstandingInterest": 351,
@@ -15309,7 +15309,7 @@
       "applicationDate": "2026-05-20",
       "approvedAt": "2026-06-19T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-06-19T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15361,7 +15361,7 @@
         "disbursedAt": "2026-07-19T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 115682,
       "outstandingInterest": 1446,
@@ -15379,7 +15379,7 @@
       "applicationDate": "2026-06-19",
       "approvedAt": "2026-07-19T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-07-19T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15431,7 +15431,7 @@
         "disbursedAt": "2026-07-19T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 36854,
       "outstandingInterest": 384,
@@ -15449,7 +15449,7 @@
       "applicationDate": "2026-06-19",
       "approvedAt": "2026-07-19T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-07-19T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     },
@@ -15501,7 +15501,7 @@
         "disbursedAt": "2026-08-18T09:41:35.913Z",
         "paymentChannel": "CBE_BANK",
         "disbursedById": "usr_admin_1",
-        "disbursedByName": "Yohannes Girma (System Admin)"
+        "disbursedByName": "Samuel Ambaw (System Admin)"
       },
       "outstandingPrincipal": 350000,
       "outstandingInterest": 4083,
@@ -15519,7 +15519,7 @@
       "applicationDate": "2026-07-19",
       "approvedAt": "2026-08-18T09:41:35.913Z",
       "approvedById": "usr_admin_1",
-      "approvedByName": "Yohannes Girma (System Admin)",
+      "approvedByName": "Samuel Ambaw (System Admin)",
       "createdAt": "2026-08-18T09:41:35.913Z",
       "updatedAt": "2026-08-18T09:41:35.913Z"
     }
@@ -19245,7 +19245,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000001-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -19270,7 +19270,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000001-2",
       "narration": "Monthly scheduled loan repayment for installment #2",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -19295,7 +19295,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000001-3",
       "narration": "Monthly scheduled loan repayment for installment #3",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -19320,7 +19320,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000001-4",
       "narration": "Monthly scheduled loan repayment for installment #4",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19345,7 +19345,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000004-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -19370,7 +19370,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000004-2",
       "narration": "Monthly scheduled loan repayment for installment #2",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -19395,7 +19395,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000004-3",
       "narration": "Monthly scheduled loan repayment for installment #3",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -19420,7 +19420,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000004-4",
       "narration": "Monthly scheduled loan repayment for installment #4",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19445,7 +19445,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000007-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -19470,7 +19470,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000007-2",
       "narration": "Monthly scheduled loan repayment for installment #2",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -19495,7 +19495,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000007-3",
       "narration": "Monthly scheduled loan repayment for installment #3",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -19520,7 +19520,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000007-4",
       "narration": "Monthly scheduled loan repayment for installment #4",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19545,7 +19545,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000010-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-05-20T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-05-20T09:41:35.913Z"
@@ -19570,7 +19570,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000010-2",
       "narration": "Monthly scheduled loan repayment for installment #2",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -19595,7 +19595,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000010-3",
       "narration": "Monthly scheduled loan repayment for installment #3",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -19620,7 +19620,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000010-4",
       "narration": "Monthly scheduled loan repayment for installment #4",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19645,7 +19645,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000013-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -19670,7 +19670,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000013-2",
       "narration": "Monthly scheduled loan repayment for installment #2",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -19695,7 +19695,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000013-3",
       "narration": "Monthly scheduled loan repayment for installment #3",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19720,7 +19720,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000016-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-06-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-06-19T09:41:35.913Z"
@@ -19745,7 +19745,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000016-2",
       "narration": "Monthly scheduled loan repayment for installment #2",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -19770,7 +19770,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000016-3",
       "narration": "Monthly scheduled loan repayment for installment #3",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19795,7 +19795,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000019-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-07-19T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-07-19T09:41:35.913Z"
@@ -19820,7 +19820,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000019-2",
       "narration": "Monthly scheduled loan repayment for installment #2",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19845,7 +19845,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000022-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -19870,7 +19870,7 @@
       "bankReferenceNo": "AUTO-DED-SA-REG-000025-1",
       "narration": "Monthly scheduled loan repayment for installment #1",
       "performedById": "usr_admin_1",
-      "performedByName": "Yohannes Girma (System Admin)",
+      "performedByName": "Samuel Ambaw (System Admin)",
       "timestamp": "2026-08-18T09:41:35.913Z",
       "status": "POSTED",
       "createdAt": "2026-08-18T09:41:35.913Z"
@@ -22728,7 +22728,7 @@
       "helpfulCount": 88,
       "notHelpfulCount": 2,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "updatedById": "usr_cs_1",
       "updatedByName": "Selamawit Bekele",
       "createdAt": "2025-01-15T10:00:00Z",
@@ -22864,9 +22864,9 @@
       "helpfulCount": 65,
       "notHelpfulCount": 0,
       "createdById": "usr_admin_1",
-      "createdByName": "Yohannes Girma (System Admin)",
+      "createdByName": "Samuel Ambaw (System Admin)",
       "updatedById": "usr_admin_1",
-      "updatedByName": "Yohannes Girma",
+      "updatedByName": "Samuel Ambaw",
       "createdAt": "2025-03-10T14:00:00Z",
       "updatedAt": "2026-07-12T15:00:00Z"
     },
@@ -23083,7 +23083,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23101,7 +23101,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23119,7 +23119,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23137,7 +23137,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23155,7 +23155,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 20,
       "riskLevel": "LOW",
       "riskFactors": [
@@ -23198,7 +23198,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23216,7 +23216,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23234,7 +23234,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23252,7 +23252,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23270,7 +23270,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 5,
       "riskLevel": "LOW",
       "riskFactors": [],
@@ -23313,7 +23313,7 @@
       "contextType": "LOGIN",
       "entityId": "usr_admin_1",
       "userId": "usr_admin_1",
-      "userFullName": "Yohannes Girma (System Admin)",
+      "userFullName": "Samuel Ambaw (System Admin)",
       "riskScore": 30,
       "riskLevel": "LOW",
       "riskFactors": [
@@ -23520,7 +23520,7 @@
     "recoveryContacts": [
       {
         "role": "Incident Commander / Chief Security Architect",
-        "name": "Yohannes Girma",
+        "name": "Samuel Ambaw",
         "phone": "+251911223344",
         "email": "admin@wabisacco.et"
       },
@@ -23810,7 +23810,7 @@
       "isEnabled": true,
       "requiresMfaToToggle": false,
       "updatedAt": "2026-08-28T18:58:01.952Z",
-      "updatedBy": "Yohannes Girma (System Admin)"
+      "updatedBy": "Samuel Ambaw (System Admin)"
     },
     {
       "key": "ENABLE_TIME_DEPOSITS",
@@ -24117,7 +24117,7 @@
       "oldValue": false,
       "newValue": true,
       "changedById": "usr_admin_1",
-      "changedByName": "Yohannes Girma (System Admin)",
+      "changedByName": "Samuel Ambaw (System Admin)",
       "changedByRole": "ADMIN",
       "ipAddress": "127.0.0.1",
       "reason": "Toggled ENABLE_ONLINE_MEMBER_REGISTRATION to ENABLED",
@@ -24130,7 +24130,7 @@
       "oldValue": true,
       "newValue": false,
       "changedById": "usr_admin_1",
-      "changedByName": "Yohannes Girma (System Admin)",
+      "changedByName": "Samuel Ambaw (System Admin)",
       "changedByRole": "ADMIN",
       "ipAddress": "127.0.0.1",
       "reason": "Toggled ENABLE_ONLINE_MEMBER_REGISTRATION to DISABLED",
@@ -24146,7 +24146,7 @@
         "name": "Wabi Savings and Credit Cooperative Society Ltd."
       },
       "changedById": "usr_admin_1",
-      "changedByName": "Yohannes Girma (System Administrator)",
+      "changedByName": "Samuel Ambaw (System Administrator)",
       "changedByRole": "ADMIN",
       "ipAddress": "192.168.1.10",
       "reason": "Initial system baseline provisioning",
@@ -24159,7 +24159,7 @@
       "oldValue": 300,
       "newValue": 500,
       "changedById": "usr_admin_1",
-      "changedByName": "Yohannes Girma",
+      "changedByName": "Samuel Ambaw",
       "changedByRole": "ADMIN",
       "ipAddress": "192.168.1.10",
       "reason": "General Assembly resolution update for 2026 thrift contributions",
@@ -24172,7 +24172,7 @@
       "oldValue": false,
       "newValue": true,
       "changedById": "usr_admin_1",
-      "changedByName": "Yohannes Girma",
+      "changedByName": "Samuel Ambaw",
       "changedByRole": "ADMIN",
       "ipAddress": "192.168.1.10",
       "reason": "Activated Phase 19 Security & Fraud AI rules engine",
@@ -24894,7 +24894,7 @@
         }
       },
       "uploadedById": "usr_admin_1",
-      "uploadedByName": "Yohannes Girma (System Admin)",
+      "uploadedByName": "Samuel Ambaw (System Admin)",
       "uploadedByRole": "ADMIN",
       "uploadDate": "2026-08-17T11:29:50.256Z",
       "createdAt": "2026-08-17T11:29:50.256Z",
@@ -24921,7 +24921,7 @@
       "rollbackInfo": {
         "rolledBackAt": "2026-08-17T11:31:07.644Z",
         "rolledBackById": "usr_admin_1",
-        "rolledBackByName": "Yohannes Girma (System Admin)",
+        "rolledBackByName": "Samuel Ambaw (System Admin)",
         "reason": "Testing automated migration rollback protocol",
         "deletedCounts": {
           "membersRemoved": 399,
@@ -32671,7 +32671,7 @@
         }
       },
       "uploadedById": "usr_admin_1",
-      "uploadedByName": "Yohannes Girma (System Admin)",
+      "uploadedByName": "Samuel Ambaw (System Admin)",
       "uploadedByRole": "ADMIN",
       "uploadDate": "2026-08-17T11:31:07.575Z",
       "createdAt": "2026-08-17T11:31:07.575Z",

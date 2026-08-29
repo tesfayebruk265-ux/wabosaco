@@ -156,7 +156,7 @@ export class OriginalDataGeneratorService {
     const memberRole = db.getRoles().find((r) => r.code === 'MEMBER') || { id: 'role_member' };
     const adminUser = db.getUserById(adminUserId) || {
       id: 'usr_admin_1',
-      fullName: 'Yohannes Girma',
+      fullName: 'Samuel Ambaw (System Admin)',
       username: 'admin.sacco',
     };
 
@@ -1020,9 +1020,9 @@ export class OriginalDataGeneratorService {
         username: 'admin.sacco',
         email: 'admin@wabisacco.et',
         phoneNumber: '+251911223344',
-        fullName: 'Yohannes Girma (System Admin)',
-        firstName: 'Yohannes',
-        lastName: 'Girma',
+        fullName: 'Samuel Ambaw (System Admin)',
+        firstName: 'Samuel',
+        lastName: 'Ambaw',
         passwordPlain: 'AdminPassword123!',
         roleId: 'role_admin',
         role: 'role_admin',

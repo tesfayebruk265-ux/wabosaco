@@ -76,7 +76,7 @@ export function authenticate(req: Request, res: Response, next: NextFunction): v
       id: payload.sub || 'usr_admin_1',
       username: payload.username || 'admin.sacco',
       email: `${payload.username || 'admin'}@wabisacco.et`,
-      fullName: payload.username === 'admin.sacco' ? 'Yohannes Girma (System Admin)' : 'Authorized Staff',
+      fullName: payload.username === 'admin.sacco' ? 'Samuel Ambaw (System Admin)' : 'Authorized Staff',
       isActive: true,
       status: 'ACTIVE',
       createdAt: new Date().toISOString(),
